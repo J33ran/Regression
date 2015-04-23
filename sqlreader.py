@@ -1,25 +1,38 @@
-import sqlparse
+"""
+SQLParsing module
+"""
+
+from sqlparse import SQLParseError, split, format
 
 def read(sqlfile):
-
-    sqls= list([])
-    # Open and read the file as a single buffer
-    fd = open(sqlfile, 'r')
-    buffer = fd.read()
-    fd.close()
+    """
+    transform sql scripts into list.
+    """
+    assert(sqlfile)
+    sqls= []
+    try:
+        # Open and read the file as a single buffer
+        with open(sqlfile, 'r') as fd:
+            buffer = fd.read()
     
-    # sql block splits
-    blocks = sqlparse.split(buffer)
+        # sql block splits
+        blocks = split(buffer)
 
-   #remove comments and empty statements
-    for block in blocks:
-       x = sqlparse.format(block,strip_comments=True)
-       if x: 
-           sqls.append(x)
-        
+        #remove comments and empty statements
+        for block in blocks:
+            x = format(block,strip_comments=True)
+            if x: 
+                sqls.append(x)
+    except Exception as e:
+        print (sqlfile, " => SQLParseError ",e.args)
+    except:
+        print (sqlfile, " => Fatal error")
+    
     return sqls
 
    
 
 if __name__ == "__main__":
-    sqlblocks = read(r'T.sql')
+    print (read(r'feed13.xml'))
+    print(read(r'T.sql'))
+    print(read(r'feed.sql'))

@@ -1,4 +1,4 @@
-import xml.etree.ElementTree as etree
+
 
 class Configuration(object):
 
@@ -7,15 +7,11 @@ class Configuration(object):
 
 def read(filename):
 
-    tree = etree.parse(filename)
-    root = tree.getroot()
-
-    for child in root:
-        print (child.attrib)
+  pass
     
 
 
 
 if __name__ == "__main__":
-    read('feed.xml')
+    #read('feed.xml')
     #sqlblocks = read(r'T.sql')
