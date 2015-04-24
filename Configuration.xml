@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<configuration>
+  <!-- <regression> -->
+    <loglevel>INFO</loglevel>
+    <log>C:\Temp</log>
+    <expected>C:\Temp</expected>
+    <result>C:\Temp</result>
+    <source>C:\Temp</source>
+  <!-- </regression> -->
+  <!-- <sybase> -->
+    <dbisql>dbisql.com</dbisql>
+    <uid>dba</uid>
+    <pwd>sql</pwd>
+    <dbf>gxdb.db</dbf>
+  <!-- </sybase> -->
+</configuration>

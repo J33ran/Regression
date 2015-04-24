@@ -1,28 +1,41 @@
 """
-It defines XmlReader class which primarily 
+It defines XMLReader class which primarily 
 features xml's loading and parsing funtionality.
 """
 from xml.etree.ElementTree  import parse
 import xml.etree.ElementTree
 
-
-if __name__ == "__main__":
+def main():
+    
     import logging
-    logging.basicConfig(filename=r'c:\example.log', filemode='w', level=logging.DEBUG)
+    logging.basicConfig(filename=r'c:\regression.log', filemode='w', level=logging.DEBUG, format='%(asctime)s %(message)s')
+    equal = XMLReader.compare(r"C:\Temp\a.xml", r"C:\Temp\b.xml")
+    logging.debug("Unexpected error raised");
+    print("Result =>",equal)
+
+'''
+    
+    # IOError
+    XMLReader(r'feed13.xml')
+    # ParseError
+    XMLReader(r'T.sql')
+    #Positive case
+    reader = XMLReader(r'feed.xml')
+    print(reader.find('published'))
+    #Invalid element
+    print(reader.find('abcdef'))
+'''
 
 
 
-class XmlReader(object):
+class XMLReader(object):
     """
-    XmlReader
+    XMLReader
     """
     def __init__(self,filename):
-        try:
-            assert(filename)
-            self.root = parse(filename).getroot()
-        except Exception as e:
-                print (filename,"=> Exception ",e.args)
-
+        assert(filename)
+        self.root = parse(filename).getroot()
+        
     def getroot(self):
         return self.root
 
@@ -31,12 +44,10 @@ class XmlReader(object):
             find(element) in tree.
             returns *element* text or empty str()
         """
-        text = str()
-        try:
-            assert(element)
-            text = self.root.find(element).text
-        finally:
-            return text
+        assert(element)
+        return self.root.find(element).text
+     
+        
 
     @staticmethod 
     def compare_tree(ltree, rtree):
@@ -74,7 +85,7 @@ class XmlReader(object):
             raise Exception("children length differs, {0} != {1}".format(len(cl1), len(cl2)))
                 
         for c1, c2 in zip(cl1, cl2):               
-            XmlReader.compare_tree(c1, c2)
+            XMLReader.compare_tree(c1, c2)
 
     @classmethod
     def compare(cls, lfile, rfile):
@@ -87,35 +98,24 @@ class XmlReader(object):
             """
         equal = True
         try:
-            rtree= XmlReader(rfile).getroot()
-            ltree = XmlReader(lfile).getroot()
+            rtree= XMLReader(rfile).getroot()
+            ltree = XMLReader(lfile).getroot()
 
-            XmlReader.compare_tree(ltree, rtree)
+            XMLReader.compare_tree(ltree, rtree)
 
         except Exception as e:
             equal = False
             #logging.debug("Exception raised =>", e.args);
             print("Exception raised =>", e.args);
         except:
-            logging.debug("Unxected error raised");
+            logging.debug("Unexpected error raised");
 
         return equal
         
 
 if __name__ == "__main__":
-    print(XmlReader.compare(r"C:\Temp\a.xml", r"C:\Temp\b.xml"))
-'''
+    main()
     
-    # IOError
-    XmlReader(r'feed13.xml')
-    # ParseError
-    XmlReader(r'T.sql')
-    #Positive case
-    reader = XmlReader(r'feed.xml')
-    print(reader.find('published'))
-    #Invalid element
-    print(reader.find('abcdef'))
-'''
 
 
 
