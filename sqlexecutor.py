@@ -1,5 +1,6 @@
 from os import path
 from configuration import Configuration
+import logging
 
 def execute(relpath):
     """
@@ -9,7 +10,7 @@ def execute(relpath):
     expected = path.join(Configuration.expecteddir, relpath)
     result = path.join(Configuration.resultdir, relpath)
 
-    print("src => ", source)
+    logging.info("src => %s" %(source))
 
     #print (path.exists(filepath))
     #    print(filepath)

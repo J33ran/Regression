@@ -24,15 +24,15 @@ def read(sqlfile):
             if x: 
                 sqls.append(x)
     except Exception as e:
-        print (sqlfile, " => SQLParseError ",e.args)
+        logging.info("SQLParseError %s, => %s" %(sqlfile,e.args))
     except:
-        print (sqlfile, " => Fatal error")
+        logging.info("Fatal error occured in %s" %(sqlfile))
     
     return sqls
 
    
 
 if __name__ == "__main__":
-    print (read(r'feed13.xml'))
-    print(read(r'T.sql'))
-    print(read(r'feed.sql'))
+    logging.info(read(r'feed13.xml'))
+    logging.info(read(r'T.sql'))
+    logging.info(read(r'feed.sql'))

@@ -4,14 +4,14 @@ features xml's loading and parsing funtionality.
 """
 from xml.etree.ElementTree  import parse
 import xml.etree.ElementTree
+import logging
 
 def main():
     
-    import logging
-    logging.basicConfig(filename=r'c:\regression.log', filemode='w', level=logging.DEBUG, format='%(asctime)s %(message)s')
+    
     equal = XMLReader.compare(r"C:\Temp\a.xml", r"C:\Temp\b.xml")
-    logging.debug("Unexpected error raised");
-    print("Result =>",equal)
+    logging.info("Unexpected error raised");
+    logging.info("Result => %s" %(equal))
 
 '''
     

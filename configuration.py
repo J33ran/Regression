@@ -40,31 +40,18 @@ class Configuration(object):
             if not isinstance(level, int):
                 raise Exception("Invalid log value")
 
-            logfile = str(r"{0}\regression.log".format(cls.logdir))
-            logging.basicConfig(filename=logfile, filemode='w'
-                            , level=level, format='%(asctime)s %(message)s')
+            #logfile = str(r"{0}\regression.log".format(cls.logdir))
+            #logging.basicConfig(filename=logfile, filemode='w'
+            #                , level=level, format='%(asctime)s %(message)s')
         except Exception as e:
-            print("Exception occured while reading configuration")
+            logging.info("Exception occured while reading configuration")
             raise Exception(e)
-
-        @staticmethod
-        def dout(*args):
-            s = str()
-            for arg in args:
-                s = s + str(arg)
-
-            print(str)
-            logging.debug(
-            pass
-
-   
-
 
 if __name__ == "__main__":
     try:
         Configuration.load(r"Configuration.xml")
     except Exception as e:
-        print(e.args)
+        logging.info("%s" %(e.args))
 
     
     #read('feed.xml')

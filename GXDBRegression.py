@@ -5,7 +5,7 @@ from sqlexecutor import execute
 from configuration import Configuration
 from threading import Thread
 import os
-#import threading
+import logging
 
 
 def usage():
@@ -14,6 +14,9 @@ def usage():
 
 def main():
     try:                                
+        logging.basicConfig(level=logging.INFO, format = '%(asctime)s  %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+
+        raise Exception("tata", "bye bye")
         opts, args = getopt.getopt(sys.argv[1:], "hc:", ["help", "config="])
         source = str()
 
@@ -37,9 +40,9 @@ def main():
                 t.start()
                 
     except (getopt.GetoptError, Exception) as e:          
-        print(e)
+        logging.info("Exception %s" %(e))
     except:
-        print ("Fatal error occured")
+        logging.info("Fatal error occured.")
 
 if __name__ == "__main__":
     main()
