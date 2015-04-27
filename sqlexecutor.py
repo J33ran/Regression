@@ -1,5 +1,18 @@
-def run(sqls, config, expected, output):
-    pass
+from os import path
+from configuration import Configuration
+
+def execute(relpath):
+    """
+        execute sql scipts and match the results
+    """
+    source = path.join(Configuration.sourcedir, relpath)
+    expected = path.join(Configuration.expecteddir, relpath)
+    result = path.join(Configuration.resultdir, relpath)
+
+    print("src => ", source)
+
+    #print (path.exists(filepath))
+    #    print(filepath)
 
 
 if __name__ == "__main__":

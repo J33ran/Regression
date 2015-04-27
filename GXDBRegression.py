@@ -1,8 +1,12 @@
 import sys
 import os
 import getopt
+from sqlexecutor import execute
 from configuration import Configuration
-from os import path, walk
+from threading import Thread
+import os
+#import threading
+
 
 def usage():
     smesg =("Help: -c or --config=configuration.xml") 
@@ -23,14 +27,15 @@ def main():
                 source = arg
                                         
         Configuration.load(source)
-        for (root, dirs, files) in walk:
+
+        for (root, dirs, files) in os.walk(Configuration.sourcedir):
             for file in files:
-                script = path.join(root,file)
-                if not script:
-                    pass
-            # s = path.join.
-            # spawn thread  sqlexecutor(path.join()
-        
+                abspath = os.path.join(root, file)
+                relpath = os.path.relpath(abspath, Configuration.sourcedir)
+                
+                t = Thread(target=execute, args=(relpath,))
+                t.start()
+                
     except (getopt.GetoptError, Exception) as e:          
         print(e)
     except:

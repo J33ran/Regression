@@ -11,8 +11,7 @@ class Configuration(object):
     expecteddir = str()
     sourcedir = str()
     resultdir = str()
-    
-
+   
     isql = str()
     uid = str()
     pwd = str()
@@ -24,27 +23,41 @@ class Configuration(object):
             reader = XMLReader(filename)
 
             #regression
-            loglevel = reader.find(r'loglevel')
-            expecteddir = reader.find(r'expected')
-            sourcedir = reader.find(r'source')
-            resultdir = reader.find(r'result')
-            logdir = reader.find(r'log')
+            cls.loglevel = reader.find(r'loglevel')
+            cls.expecteddir = reader.find(r'expected')
+            cls.sourcedir = reader.find(r'source')
+            cls.resultdir = reader.find(r'result')
+            cls.logdir = reader.find(r'log')
 
             #sybase
-            isql = reader.find(r'dbisql')
-            uid = reader.find(r'uid')
-            pwd = reader.find(r'pwd')
-            dbf = reader.find(r'dbf')
+            cls.isql = reader.find(r'dbisql')
+            cls.uid = reader.find(r'uid')
+            cls.pwd = reader.find(r'pwd')
+            cls.dbf = reader.find(r'dbf')
 
-            level = getattr(logging, loglevel.upper())
+            level = getattr(logging, cls.loglevel.upper())
 
             if not isinstance(level, int):
-                logfile = str(r"{0}\regression.log".format(logdir))
-                logging.basicConfig(filename=logfile, filemode='w'
-                               , level=level, format='%(asctime)s %(message)s')
+                raise Exception("Invalid log value")
+
+            logfile = str(r"{0}\regression.log".format(cls.logdir))
+            logging.basicConfig(filename=logfile, filemode='w'
+                            , level=level, format='%(asctime)s %(message)s')
         except Exception as e:
             print("Exception occured while reading configuration")
             raise Exception(e)
+
+        @staticmethod
+        def dout(*args):
+            s = str()
+            for arg in args:
+                s = s + str(arg)
+
+            print(str)
+            logging.debug(
+            pass
+
+   
 
 
 if __name__ == "__main__":
