@@ -1,8 +1,9 @@
 """
 SQLParsing module
 """
-
-from sqlparse import SQLParseError, split, format
+import logging
+import sqlparse
+#from sqlparse import SQLParseError, split, format, sql
 
 def read(sqlfile):
     """
@@ -16,13 +17,22 @@ def read(sqlfile):
             buffer = fd.read()
     
         # sql block splits
-        blocks = split(buffer)
+        blocks = sqlparse.split(buffer)
 
         #remove comments and empty statements
         for block in blocks:
-            x = format(block,strip_comments=True)
+            x = sqlparse.format(block,strip_comments=True)
+         
             if x: 
+                logging.info("SQL %s" %(x))
+                stmt = (sqlparse.parse(x)[0]).get_type()
+                logging.info("SQL type = %s" %(stmt))
+                if (stmt.upper() == r"SELECT"):
+                    # append out string otherwise not
+                    pass
+                #logging.info("SQL Statement type %s" %(stmt.get_type()))
                 sqls.append(x)
+
     except Exception as e:
         logging.info("SQLParseError %s, => %s" %(sqlfile,e.args))
     except:
@@ -33,6 +43,7 @@ def read(sqlfile):
    
 
 if __name__ == "__main__":
-    logging.info(read(r'feed13.xml'))
-    logging.info(read(r'T.sql'))
-    logging.info(read(r'feed.sql'))
+    #logging.info(read(r'feed13.xml'))
+    logging.basicConfig(level=logging.INFO, format = '%(asctime)s  %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+    logging.info(read(r'SQL/T.sql'))
+    #logging.info(read(r'feed.sql'))

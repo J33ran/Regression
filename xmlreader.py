@@ -105,8 +105,9 @@ class XMLReader(object):
 
         except Exception as e:
             equal = False
+            logging.info("Exception raised => %s" %(e.args));
             #logging.debug("Exception raised =>", e.args);
-            print("Exception raised =>", e.args);
+            #print("Exception raised =>", e.args);
         except:
             logging.debug("Unexpected error raised");
 
