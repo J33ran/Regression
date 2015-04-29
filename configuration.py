@@ -18,7 +18,7 @@ class Configuration(object):
     dbf = str()
 
     @classmethod
-    def load(cls, filename):
+    def load(cls, filename, format):
         try:
             reader = XMLReader(filename)
 
@@ -40,9 +40,14 @@ class Configuration(object):
             if not isinstance(level, int):
                 raise Exception("Invalid log value")
 
-            #logfile = str(r"{0}\regression.log".format(cls.logdir))
-            #logging.basicConfig(filename=logfile, filemode='w'
-            #                , level=level, format='%(asctime)s %(message)s')
+            fh  = logging.FileHandler(str(r"{0}\regression.log".format(cls.logdir)))
+            fh.setLevel(level)
+
+            formatter = logging.Formatter(fmt=format[0], datefmt=format[1])
+            fh.setFormatter(formatter)
+
+            logging.getLogger('').addHandler(fh)
+
         except Exception as e:
             logging.info("Exception occured while reading configuration")
             raise Exception(e)

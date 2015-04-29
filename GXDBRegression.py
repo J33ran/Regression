@@ -1,22 +1,45 @@
 import sys
 import os
 import getopt
-from sqlexecutor import execute
+from sqlexecutor import SQLExecutor
 from configuration import Configuration
 from threading import Thread
 import os
 import logging
+from time import time
 
 
 def usage():
     smesg =("Help: -c or --config=configuration.xml") 
     raise getopt.GetoptError(smesg)
 
-def main():
-    try:                                
-        logging.basicConfig(level=logging.INFO, format = '%(asctime)s  %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+def execute():
+    """
+        Execute method.
+    """
+    start_time = time()
+    total = 0
+    for (root, dirs, files) in os.walk(Configuration.sourcedir):
+        for file in files:
+            abspath = os.path.join(root, file)
+            relpath = os.path.relpath(abspath, Configuration.sourcedir)
 
-        raise Exception("tata", "bye bye")
+            # Generate thread for each source file
+            t = SQLExecutor(relpath, file)
+            t.start()
+            t.join()
+            total = total + 1
+
+    logging.info("%d passed out of %d" %(SQLExecutor.getPassed(), total))
+    logging.info("Total elapsed time(secs) %.2f" %(time() - start_time))
+
+def main():
+    try:
+        format = ['%(asctime)s  %(message)s', '%Y-%m-%d %H:%M:%S']
+        threads = [] 
+
+        logging.basicConfig(level=logging.INFO, format = format[0], datefmt=format[1])
+
         opts, args = getopt.getopt(sys.argv[1:], "hc:", ["help", "config="])
         source = str()
 
@@ -28,16 +51,12 @@ def main():
                 usage()
             elif opt in  ("-c", "--config"):
                 source = arg
-                                        
-        Configuration.load(source)
 
-        for (root, dirs, files) in os.walk(Configuration.sourcedir):
-            for file in files:
-                abspath = os.path.join(root, file)
-                relpath = os.path.relpath(abspath, Configuration.sourcedir)
-                
-                t = Thread(target=execute, args=(relpath,))
-                t.start()
+        # Configurations init
+        Configuration.load(source, format)
+
+        # Execute Scripts
+        execute()
                 
     except (getopt.GetoptError, Exception) as e:          
         logging.info("Exception %s" %(e))

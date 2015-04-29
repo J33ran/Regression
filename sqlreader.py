@@ -5,12 +5,13 @@ import logging
 import sqlparse
 #from sqlparse import SQLParseError, split, format, sql
 
-def read(sqlfile):
+def read(sqlfile, resultfile):
     """
     transform sql scripts into list.
     """
     assert(sqlfile)
     sqls= []
+    output = 'OUTPUT TO ' + str(resultfile)
     try:
         # Open and read the file as a single buffer
         with open(sqlfile, 'r') as fd:
@@ -24,10 +25,12 @@ def read(sqlfile):
             x = sqlparse.format(block,strip_comments=True)
          
             if x: 
-                logging.info("SQL %s" %(x))
+                
+                # get stmt type
                 stmt = (sqlparse.parse(x)[0]).get_type()
-                logging.info("SQL type = %s" %(stmt))
                 if (stmt.upper() == r"SELECT"):
+                    sqls.append(x)
+                    
                     # append out string otherwise not
                     pass
                 #logging.info("SQL Statement type %s" %(stmt.get_type()))

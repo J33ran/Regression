@@ -4,7 +4,7 @@
     <loglevel>INFO</loglevel>
     <log>C:\Temp</log>
     <expected>C:\Temp</expected>
-    <result>C:\Temp</result>
+    <result>D:\Temp</result>
     <source>C:\Temp</source>
   <!-- </regression> -->
   <!-- <sybase> -->
