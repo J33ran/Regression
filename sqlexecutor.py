@@ -1,9 +1,10 @@
-from os import path, makedirs
+from os import path, makedirs,system
 from configuration import Configuration
-import sqlreader as reader
+import sqlreader
 from xmlreader import XMLReader
 import logging
 import threading
+import subprocess
 
 
 
@@ -12,14 +13,6 @@ class SQLExecutor(threading.Thread):
     """
     SQLExecutor 
     """
-    __lock = threading.Lock()
-    __cntlock = threading.Lock()
-    __passed  = 0
-
-    @classmethod
-    def getPassed(cls):
-        return cls.__passed
-
     def __init__(self, relpath, name):
         #try:
         super(SQLExecutor,self).__init__(name = name)
@@ -34,43 +27,55 @@ class SQLExecutor(threading.Thread):
         #finally:
 
     #def __del__(self):
-    #    with self.__cntlock:
-    #        if (self.result == True):
-    #           self.__passed = self.__passed +1
-    #        self.__total = self.__total + 1
+    #    if (self.result == True):
+    #        self.__class__.__pass = self.__class__.__pass +1
 
-        #status = "[Pass]" if self.result else "[Fail]"
-        #logging.info('%s ... %s' %(self.name,status))
+    #    self.__class__.__total = self.__class__.__total + 1
+    #    status = "[Pass]" if self.result else "[Fail]"
+
+    #    logging.info('%s ... %s' %(self.name,status))
 
     def run(self):
         """
             execute sql scipts and match the results
         """
-        result = False
+        pas = False
         try:
             source = path.join(Configuration.sourcedir, self.relpath)
 
-            expected = path.join(Configuration.expecteddir, self.relpath + ".xml")
-            resulted = path.join(Configuration.resultdir, self.relpath + ".xml")
+            expect = path.join(Configuration.expecteddir, self.relpath + ".xml")
+            result = path.join(Configuration.resultdir, self.relpath + ".xml")
     
             # Test whether result exists or create one.
             resdir = path.join(Configuration.resultdir, path.dirname(self.relpath)) 
 
             # synchronisation locking
-            with self.__class__.__lock:
-                if not path.exists(resdir):
-                    makedirs(resdir)
+            #with self.__class__.__lock:
+            if not path.exists(resdir):
+                makedirs(resdir)
 
-            logging.info('run %s' %(self.name))
-            result = True
+            exe = Configuration.get_exe()
+            sqls = sqlreader.read(source, result)
+
+            # Execute commands
+            args = str(r'"UID=') + Configuration.uid \
+                + str(r';PWD=') + Configuration.pwd + str(r';DBF=') + Configuration.dbf + str(r'" ')
+
+            #command  = [Configuration.isql, '-c',  args,
+            for sql in sqls:
+                #command = exe + sql
+                command  = [Configuration.isql, '-c',  args, sql]
+                if (sql):
+                    logging.info("command => %s" %(command))
+                    subprocess.call(command)
+                    #system(command)
+
+            pas = XMLReader.compare(expect, result)
         except:
-            pass
-        finally:
-            status = "[Pass]" if result else "[Fail]"
-            logging.info('%s ... %s' %(self.name,status))
-            with self.__class__.__lock:
-                if result == True:
-                     self.__class__.__passed = self.__class__.__passed + 1 
+            pas = False
+        
+        return pas
+        
 
 
     # Run sql scripts

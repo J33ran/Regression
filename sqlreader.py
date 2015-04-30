@@ -3,7 +3,6 @@ SQLParsing module
 """
 import logging
 import sqlparse
-#from sqlparse import SQLParseError, split, format, sql
 
 def read(sqlfile, resultfile):
     """
@@ -11,7 +10,8 @@ def read(sqlfile, resultfile):
     """
     assert(sqlfile)
     sqls= []
-    output = 'OUTPUT TO ' + str(resultfile)
+    output = str("OUTPUT TO ") + str(resultfile) + str(" FORMAT XML")
+
     try:
         # Open and read the file as a single buffer
         with open(sqlfile, 'r') as fd:
@@ -22,20 +22,19 @@ def read(sqlfile, resultfile):
 
         #remove comments and empty statements
         for block in blocks:
-            x = sqlparse.format(block,strip_comments=True)
+            sql = sqlparse.format(block,strip_comments=True)
          
-            if x: 
-                
-                # get stmt type
-                stmt = (sqlparse.parse(x)[0]).get_type()
-                if (stmt.upper() == r"SELECT"):
-                    sqls.append(x)
-                    
-                    # append out string otherwise not
-                    pass
-                #logging.info("SQL Statement type %s" %(stmt.get_type()))
-                sqls.append(x)
+            # If sql is not empty
+            if sql: 
+                # all sql are command.
+                command  = sql
 
+                # if select statemnt add  output statement
+                stmt = (sqlparse.parse(sql)[0]).get_type()
+                if (stmt.upper() == r"SELECT"):
+                    command = command + output
+
+                sqls.append(command)
     except Exception as e:
         logging.info("SQLParseError %s, => %s" %(sqlfile,e.args))
     except:

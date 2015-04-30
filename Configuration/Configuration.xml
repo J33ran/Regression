@@ -3,14 +3,14 @@
   <!-- <regression> -->
     <loglevel>INFO</loglevel>
     <log>C:\Temp</log>
-    <expected>C:\Temp</expected>
-    <result>D:\Temp</result>
-    <source>C:\Temp</source>
+    <expected>D:\Samples\GXDBRegression\GXDBRegression\Expected</expected>
+    <result>D:\Samples\GXDBRegression\GXDBRegression\Results</result>
+    <source>D:\Samples\GXDBRegression\GXDBRegression\SQL</source>
   <!-- </regression> -->
   <!-- <sybase> -->
-    <dbisql>dbisql.com</dbisql>
+    <dbisql>C:\Program Files (x86)\GeoGraphix\SQL Anywhere 12\BIN32\dbisql.com</dbisql>
     <uid>dba</uid>
     <pwd>sql</pwd>
-    <dbf>gxdb.db</dbf>
+    <dbf>C:\ProgramData\GeoGraphix\Projects\Chuck J White Full Horizontal Demo SEG-3D 8353 9209 10004_10065RCG\gxdb.db</dbf>
   <!-- </sybase> -->
 </configuration>

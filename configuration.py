@@ -1,6 +1,7 @@
 """
 Configuration represents user provided configuration
 """
+from os import path
 from xmlreader import XMLReader
 import logging
 
@@ -16,6 +17,21 @@ class Configuration(object):
     uid = str()
     pwd = str()
     dbf = str()
+    exe = str()
+
+    @staticmethod
+    def path_exists(dir):
+        if not path.exists(dir):
+            raise Exception("Invalid path", dir)
+
+    @staticmethod 
+    def file_exists(file):
+        if not path.isfile(file):
+            raise Exception("Invalid path", file)
+
+    @classmethod
+    def get_exe(cls):
+        return cls.exe
 
     @classmethod
     def load(cls, filename, format):
@@ -24,16 +40,29 @@ class Configuration(object):
 
             #regression
             cls.loglevel = reader.find(r'loglevel')
+
             cls.expecteddir = reader.find(r'expected')
             cls.sourcedir = reader.find(r'source')
             cls.resultdir = reader.find(r'result')
             cls.logdir = reader.find(r'log')
+
+            # directories must exist
+            cls.path_exists(cls.expecteddir)
+            cls.path_exists(cls.sourcedir)
+            cls.path_exists(cls.logdir)
+            cls.path_exists(cls.resultdir)
 
             #sybase
             cls.isql = reader.find(r'dbisql')
             cls.uid = reader.find(r'uid')
             cls.pwd = reader.find(r'pwd')
             cls.dbf = reader.find(r'dbf')
+
+            cls.file_exists(cls.isql)
+            cls.file_exists(cls.dbf)
+            
+            cls.exe = cls.isql +  str(r' -c "UID=') + cls.uid \
+                + str(r';PWD=') + cls.pwd + str(r';DBF=') + cls.dbf + str(r'" ')
 
             level = getattr(logging, cls.loglevel.upper())
 

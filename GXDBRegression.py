@@ -19,18 +19,26 @@ def execute():
     """
     start_time = time()
     total = 0
+    pas = 0
     for (root, dirs, files) in os.walk(Configuration.sourcedir):
         for file in files:
+
+            # path manipulation
             abspath = os.path.join(root, file)
             relpath = os.path.relpath(abspath, Configuration.sourcedir)
 
-            # Generate thread for each source file
-            t = SQLExecutor(relpath, file)
-            t.start()
-            t.join()
+            # must be single threaded so db state remain valid
+            executor = SQLExecutor(relpath, file)
+            result = executor.run()
+
+            status = "[Pass]" if (result == True) else "[Fail]"
+            logging.info("%s => %s" %(file, status))
+
+            if (result == True):
+                pas = pas + 1
             total = total + 1
 
-    logging.info("%d passed out of %d" %(SQLExecutor.getPassed(), total))
+    logging.info("%d passed out of %d" %(pas, total))
     logging.info("Total elapsed time(secs) %.2f" %(time() - start_time))
 
 def main():
