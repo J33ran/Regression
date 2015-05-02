@@ -30,7 +30,9 @@ def read(sqlfile, resultfile):
                 command  = sql
 
                 # if select statemnt add  output statement
-                stmt = (sqlparse.parse(sql)[0]).get_type()
+                stmt = (sqlparse.parse(sql)[0]).get_type().upper()
+
+                if (stmt == "UNKNOWN"): continue
                 if (stmt.upper() == r"SELECT"):
                     command = command + output
 
@@ -45,7 +47,6 @@ def read(sqlfile, resultfile):
    
 
 if __name__ == "__main__":
-    #logging.info(read(r'feed13.xml'))
-    logging.basicConfig(level=logging.INFO, format = '%(asctime)s  %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
-    logging.info(read(r'SQL/T.sql'))
-    #logging.info(read(r'feed.sql'))
+    s = read(r'Expected/feed.xml', 'Expected/config.txt')
+    print(s)
+    #logging.info(read(r'SQL/T.sql'))

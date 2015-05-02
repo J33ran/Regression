@@ -1,5 +1,4 @@
 import unittest
-import logging
 from configuration import Configuration
 
 
@@ -28,9 +27,4 @@ class TestConfiguration(unittest.TestCase):
         self.assertEqual(Configuration.resultdir,'Results')
         self.assertEqual(Configuration.logdir,'Temp')
 
-if __name__== "__main__":
 
-    format = ['%(asctime)s  %(message)s', '%Y-%m-%d %H:%M:%S']
-    logging.basicConfig(level=logging.INFO, format = format[0], datefmt=format[1])
-
- 
