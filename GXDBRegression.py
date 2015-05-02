@@ -1,4 +1,4 @@
-import sys
+mport sys
 import os
 import getopt
 from sqlexecutor import SQLExecutor
@@ -54,7 +54,7 @@ def main():
         if not opts:
             usage()
 
-        for opt, arg in opts:                
+        for opt, arg in opts:
             if opt in ("-h", "--help"): 
                 usage()
             elif opt in  ("-c", "--config"):
@@ -65,23 +65,11 @@ def main():
 
         # Execute Scripts
         execute()
-                
-    except (getopt.GetoptError, Exception) as e:          
+
+    except (getopt.GetoptError, Exception) as e:
         logging.info("Exception %s" %(e))
     except:
         logging.info("Fatal error occured.")
 
 if __name__ == "__main__":
     main()
-    #sqlblocks = sqlreader.read(r'T.sql')
-    
-    # read sql blocks
-    #for block in sqlblocks:
-    #    print ("sql : ", block)
-    
-     
-    
-
-
-
-            

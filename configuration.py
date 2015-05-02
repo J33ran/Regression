@@ -12,7 +12,7 @@ class Configuration(object):
     expecteddir = str()
     sourcedir = str()
     resultdir = str()
-   
+
     isql = str()
     uid = str()
     pwd = str()
@@ -60,7 +60,7 @@ class Configuration(object):
 
             cls.file_exists(cls.isql)
             cls.file_exists(cls.dbf)
-            
+
             cls.exe = cls.isql +  str(r' -c "UID=') + cls.uid \
                 + str(r';PWD=') + cls.pwd + str(r';DBF=') + cls.dbf + str(r'" ')
 
@@ -77,16 +77,15 @@ class Configuration(object):
 
             logging.getLogger('').addHandler(fh)
 
-        except Exception as e:
+        except Exception:# as e:
             logging.info("Exception occured while reading configuration")
-            raise Exception(e)
+            raise
 
-if __name__ == "__main__":
-    try:
-        Configuration.load(r"Configuration.xml")
-    except Exception as e:
-        logging.info("%s" %(e.args))
+#if __name__ == "__main__":
+#    try:
+#        Configuration.load(r"Configuration.xml")
+#    except Exception as e:
+#        logging.info("%s" %(e.args))
 
-    
     #read('feed.xml')
     #sqlblocks = read(r'T.sql')
