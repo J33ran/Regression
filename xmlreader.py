@@ -6,29 +6,6 @@ from xml.etree.ElementTree  import parse
 import xml.etree.ElementTree
 import logging
 
-
-def main():
-    
-    
-    equal = XMLReader.compare(r"C:\Temp\a.xml", r"C:\Temp\b.xml")
-    logging.info("Unexpected error raised");
-    logging.info("Result => %s" %(equal))
-
-'''
-    
-    # IOError
-    XMLReader(r'feed13.xml')
-    # ParseError
-    XMLReader(r'T.sql')
-    #Positive case
-    reader = XMLReader(r'feed.xml')
-    print(reader.find('published'))
-    #Invalid element
-    print(reader.find('abcdef'))
-'''
-
-
-
 class XMLReader(object):
     """
     XMLReader
@@ -97,28 +74,18 @@ class XMLReader(object):
             :return:
                 True if both files match.
             """
-        equal = True
+        equal = False
         try:
-            rtree= XMLReader(rfile).getroot()
             ltree = XMLReader(lfile).getroot()
+            rtree= XMLReader(rfile).getroot()
 
             XMLReader.compare_tree(ltree, rtree)
+            equal = True
 
         except Exception as e:
-            equal = False
-            logging.info("Exception raised => %s" %(e.args));
-            #logging.debug("Exception raised =>", e.args);
-            #print("Exception raised =>", e.args);
+            logging.info("Exception occured in XML compare %s" %(e))
         except:
             logging.debug("Unexpected error raised");
 
         return equal
-        
-
-if __name__ == "__main__":
-    main()
-    
-
-
-
 
