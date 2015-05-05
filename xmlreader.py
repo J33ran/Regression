@@ -83,7 +83,7 @@ class XMLReader(object):
             equal = True
 
         except Exception as e:
-            logging.info("Exception occured in XML compare %s" %(e))
+            logging.debug("Exception occured in XML compare %s" %(e))
         except:
             logging.debug("Unexpected error raised");
 

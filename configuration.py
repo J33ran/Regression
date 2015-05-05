@@ -18,6 +18,7 @@ class Configuration(object):
     pwd = str()
     dbf = str()
     exe = str()
+    level = int()
 
     @staticmethod
     def path_exists(dir):
@@ -29,9 +30,9 @@ class Configuration(object):
         if not path.isfile(file):
             raise Exception("Invalid path", file)
 
-    @classmethod
-    def get_exe(cls):
-        return cls.exe
+    #@staticmethod
+    #def get_loglevel():
+    #    return Configuration.level
 
     @classmethod
     def load(cls, filename, format):
@@ -39,7 +40,7 @@ class Configuration(object):
             reader = XMLReader(filename)
 
             #regression
-            cls.loglevel = reader.find(r'loglevel')
+            loglevel = reader.find(r'loglevel')
 
             cls.expecteddir = reader.find(r'expected')
             cls.sourcedir = reader.find(r'source')
@@ -64,13 +65,13 @@ class Configuration(object):
             cls.exe = cls.isql +  str(r' -c "UID=') + cls.uid \
                 + str(r';PWD=') + cls.pwd + str(r';DBF=') + cls.dbf + str(r'" ')
 
-            level = getattr(logging, cls.loglevel.upper())
+            cls.level = getattr(logging, loglevel.upper())
 
-            if not isinstance(level, int):
+            if not isinstance(cls.level, int):
                 raise Exception("Invalid log value")
 
             fh  = logging.FileHandler(str(r"{0}\regression.log".format(cls.logdir)))
-            fh.setLevel(level)
+            fh.setLevel(cls.level)
 
             formatter = logging.Formatter(fmt=format[0], datefmt=format[1])
             fh.setFormatter(formatter)
@@ -78,14 +79,6 @@ class Configuration(object):
             logging.getLogger('').addHandler(fh)
 
         except Exception:# as e:
-            logging.info("Exception occured while reading configuration")
+            logging.log("Exception occured while reading configuration")
             raise
 
-#if __name__ == "__main__":
-#    try:
-#        Configuration.load(r"Configuration.xml")
-#    except Exception as e:
-#        logging.info("%s" %(e.args))
-
-    #read('feed.xml')
-    #sqlblocks = read(r'T.sql')

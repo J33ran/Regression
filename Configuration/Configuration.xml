@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <configuration>
   <!-- <regression> -->
-    <loglevel>INFO</loglevel>
+    <loglevel>DEBUG</loglevel>
     <log>C:\Temp</log>
     <expected>D:\Samples\GXDBRegression\GXDBRegression\Expected</expected>
     <result>D:\Samples\GXDBRegression\GXDBRegression\Results</result>
@@ -11,6 +11,6 @@
     <dbisql>C:\Program Files (x86)\GeoGraphix\SQL Anywhere 12\BIN32\dbisql.com</dbisql>
     <uid>dba</uid>
     <pwd>sql</pwd>
-    <dbf>C:\ProgramData\GeoGraphix\Projects\Chuck J White Full Horizontal Demo SEG-3D 8353 9209 10004_10065RCG\gxdb.db</dbf>
+    <dbf>D:\Samples\GXDBRegression\GXDBRegression\Chuck J White Full Horizontal Demo SEG-3D 8353 9209 10004_10065RCG\gxdb.db</dbf>
   <!-- </sybase> -->
 </configuration>

@@ -1,6 +1,0 @@
-#Connect to the sample database as the user DBA with password sql
--c "UID=DBA;PWD=sql;DBF=gxdb.db"
-#Perform an express check on each table
-#-fx
-#Log output messages to the specified file
-#-o "c:\Temp\a.txt"

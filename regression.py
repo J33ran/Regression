@@ -1,12 +1,24 @@
-mport sys
+import sys
 import os
 import getopt
-from sqlexecutor import SQLExecutor
+import logging
+
+from executor import Executor
 from configuration import Configuration
 from threading import Thread
-import os
-import logging
 from time import time
+from dispatcher import Dispatcher
+
+def create_logger(format):
+    
+    formatter = logging.Formatter(fmt=format[0], datefmt=format[1])
+    logging.getLogger('').setLevel(logging.DEBUG)
+
+    ch = logging.StreamHandler()
+    ch.setLevel(logging.INFO)
+
+    ch.setFormatter(formatter)
+    logging.getLogger('').addHandler(ch)
 
 
 def usage():
@@ -17,9 +29,8 @@ def execute():
     """
         Execute method.
     """
-    start_time = time()
-    total = 0
-    pas = 0
+    threads = []
+
     for (root, dirs, files) in os.walk(Configuration.sourcedir):
         for file in files:
 
@@ -28,26 +39,27 @@ def execute():
             relpath = os.path.relpath(abspath, Configuration.sourcedir)
 
             # must be single threaded so db state remain valid
-            executor = SQLExecutor(relpath, file)
-            result = executor.run()
+            executor = Executor(relpath, file)
+            resultfiles = executor.run()
 
-            status = "[Pass]" if (result == True) else "[Fail]"
-            logging.info("%s => %s" %(file, status))
+            
+            for result in resultfiles:
+                expectfile = os.path.join(Configuration.expecteddir, result)
+                resultfile = os.path.join(Configuration.resultdir, result)
 
-            if (result == True):
-                pas = pas + 1
-            total = total + 1
-
-    logging.info("%d passed out of %d" %(pas, total))
-    logging.info("Total elapsed time(secs) %.2f" %(time() - start_time))
+                t = Dispatcher("", expectfile, resultfile)
+                t.start()
+                threads.append(t)
+                
+    for t in threads:
+        t.join()
 
 def main():
     try:
         format = ['%(asctime)s  %(message)s', '%Y-%m-%d %H:%M:%S']
         threads = [] 
 
-        logging.basicConfig(level=logging.INFO, format = format[0], datefmt=format[1])
-
+        create_logger(format)
         opts, args = getopt.getopt(sys.argv[1:], "hc:", ["help", "config="])
         source = str()
 
@@ -63,8 +75,17 @@ def main():
         # Configurations init
         Configuration.load(source, format)
 
+        start_time = time()
         # Execute Scripts
         execute()
+
+        pas = Dispatcher.get_pass()
+        total = Dispatcher.get_total()
+        
+        total_time = time() - start_time
+
+        logging.info("%d passed out of %d" %(pas, total))
+        logging.info("Total elapsed time(secs) %.2f" %(total_time))
 
     except (getopt.GetoptError, Exception) as e:
         logging.info("Exception %s" %(e))
