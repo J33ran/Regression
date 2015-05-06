@@ -29,7 +29,7 @@ def execute():
     """
         Execute method.
     """
-    threads = []
+    resultfiles = []
 
     for (root, dirs, files) in os.walk(Configuration.sourcedir):
         for file in files:
@@ -42,22 +42,31 @@ def execute():
             executor = Executor(relpath, file)
             resultfiles = executor.run()
 
-            
-            for result in resultfiles:
-                expectfile = os.path.join(Configuration.expecteddir, result)
-                resultfile = os.path.join(Configuration.resultdir, result)
+    return resultfiles
 
-                t = Dispatcher("", expectfile, resultfile)
-                t.start()
-                threads.append(t)
+def dispatch(resultfiles):
+
+    threads = []
+    for result in resultfiles:
+        expectfile = os.path.join(Configuration.expecteddir, result)
+        resultfile = os.path.join(Configuration.resultdir, result)
+
+        t = Dispatcher("", expectfile, resultfile, result)
+        t.start()
+        threads.append(t)
                 
     for t in threads:
         t.join()
 
+
+    return(Dispatcher.get_pass(), Dispatcher.get_total())
+
 def main():
     try:
         format = ['%(asctime)s  %(message)s', '%Y-%m-%d %H:%M:%S']
-        threads = [] 
+        resultfiles = []
+        pas = 0
+        total = 0
 
         create_logger(format)
         opts, args = getopt.getopt(sys.argv[1:], "hc:", ["help", "config="])
@@ -76,16 +85,19 @@ def main():
         Configuration.load(source, format)
 
         start_time = time()
-        # Execute Scripts
-        execute()
 
-        pas = Dispatcher.get_pass()
-        total = Dispatcher.get_total()
-        
+        # Execute Scripts
+        resultfiles = execute()
+
+        # Dispatch results
+        pas, total = dispatch(resultfiles)
+
         total_time = time() - start_time
 
+        logging.info("==============================================")
         logging.info("%d passed out of %d" %(pas, total))
         logging.info("Total elapsed time(secs) %.2f" %(total_time))
+        logging.info("==============================================")
 
     except (getopt.GetoptError, Exception) as e:
         logging.info("Exception %s" %(e))

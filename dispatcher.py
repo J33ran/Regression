@@ -18,11 +18,12 @@ class Dispatcher(threading.Thread):
     def get_pass(cls):
         return cls.__pass
 
-    def __init__(self, name, expectfile, resultfile):
+    def __init__(self, name, expectfile, resultfile, relfilename):
         super(Dispatcher, self).__init__(name = name)
 
         self.resultfile = resultfile
         self.expectfile = expectfile
+        self.relfilename = relfilename
 
     def run(self):
         """
@@ -37,7 +38,7 @@ class Dispatcher(threading.Thread):
             logging.debug("Unknown exception occured")
         finally:
             status = "[Pass]" if (result == True) else "[Fail]"
-            logging.info("%s => %s" %(self.resultfile, status))
+            logging.info("%s => %s" %(self.relfilename, status))
 
             # synchronisation locking
             with  Dispatcher.__lock:
