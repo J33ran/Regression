@@ -79,6 +79,6 @@ class Configuration(object):
             logging.getLogger('').addHandler(fh)
 
         except Exception:# as e:
-            logging.log("Exception occured while reading configuration")
+            logging.debug("Exception occured while reading configuration")
             raise
 

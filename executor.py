@@ -51,6 +51,7 @@ class Executor(threading.Thread):
             if not path.exists(resdir):
                 makedirs(resdir)
 
+            logging.info("Processing => %s" %(self.relpath))
             resultfiles = SQLManager.process(sourcefile, Configuration.resultdir, self.relpath)
 
             args = str(r'UID=') + Configuration.uid \
@@ -58,8 +59,11 @@ class Executor(threading.Thread):
 
 
             if resultfiles:
-                command  = [Configuration.isql, r'-c',  args, r'-onerror', r'continue', resultfile]
-                logging.info("command => %s" %(command))
+                #file = path.split(resultfile, Configuration.resultdir)
+                logging.info("Executing => %s" %(self.relpath))
+                #command  = [Configuration.isql, r'-q', r'-c',  args, r'-onerror', r'continue', resultfile]
+                command  = [Configuration.isql, r'-q', r'-c',  args, resultfile]
+                logging.debug("command => %s" %(command))
                 subprocess.call(command)
 
         except:

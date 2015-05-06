@@ -40,7 +40,7 @@ def execute():
 
             # must be single threaded so db state remain valid
             executor = Executor(relpath, file)
-            resultfiles = executor.run()
+            resultfiles = resultfiles + executor.run()
 
     return resultfiles
 
@@ -100,7 +100,7 @@ def main():
         logging.info("==============================================")
 
     except (getopt.GetoptError, Exception) as e:
-        logging.info("Exception %s" %(e))
+        logging.info("Exception %s" %str(e))
     except:
         logging.info("Fatal error occured.")
 
