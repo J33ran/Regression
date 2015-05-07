@@ -3,7 +3,7 @@ It defines XMLReader class which primarily
 features xml's loading and parsing funtionality.
 """
 from xml.etree.ElementTree  import parse
-from os import path
+from os import path,makedirs
 import getopt
 import sys
 
@@ -36,7 +36,14 @@ def main():
         view = str()
 
         for child in root:
+            subdir = child[0].text
             view = (child[1].text)
+
+            resdir = path.join(outdir, subdir)
+             #with self.__class__.__lock:
+            if not path.exists(resdir):
+                makedirs(resdir)
+
 
             found = view.upper().find(r"AS")
 
@@ -45,7 +52,7 @@ def main():
                 header = view[:found]
                 name = (header.split(".")[1]).rstrip() + str(".sql")
 
-                outname = path.join(outdir, name)
+                outname = path.join(resdir, name)
                 view = view[found + len( "AS"):].lstrip()                
                 with open(outname, 'w') as fd:
                     fd.writelines(view)

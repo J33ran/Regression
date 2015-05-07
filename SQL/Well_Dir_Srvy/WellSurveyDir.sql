@@ -12,7 +12,6 @@ select WELL_DIR_SRVY.UWI as "Well ID",WELL_DIR_SRVY.SOURCE as Source,
     WELL_DIR_SRVY.GX_BASE_LOCATION_STRING as "S/T/R",
     WELL_DIR_SRVY.GX_CLOSURE as Closure,
     WELL_DIR_SRVY.CALCULATION_REQUIRED as "Calculation Required",
-    WELL_DIR_SRVY.NORTH_REFERENCE as "North Reference",
-    WELL_DIR_SRVY.ROW_CHANGED_DATE as "Row Changed Date"
+    WELL_DIR_SRVY.NORTH_REFERENCE as "North Reference"
     from dba.WELL_DIR_SRVY 
     ORDER BY "Well ID";

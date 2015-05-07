@@ -19,7 +19,6 @@ WELL.TD_FORM                        AS "Fm at TD",
 WELL.GX_TD_FORM_ALIAS           AS "Fm Alias at TD",
 WELL.SPUD_DATE                  AS "Spud Date",
 WELL.COMPLETION_DATE                AS "Comp Date",
--- WELL.ROW_CHANGED_DATE            AS "Data Date",
 WELL.GEOLOGIC_PROVINCE          AS Area,
 WELL.DISTRICT                   AS District,
 WELL.ASSIGNED_FIELD             AS Field,
@@ -40,5 +39,4 @@ WELL.PARENT_UWI                 AS "Parent UWI",
 WELL.LEGAL_SURVEY_TYPE          AS "Legal Survey Type",
 WELL.GX_LOCATION_STRING         AS "Location",
 WELL.GX_REMARKS                 AS "Remarks"
--- WELL.ROW_CHANGED_DATE as "Row Changed Date"
 FROM WELL ORDER BY "Well ID";

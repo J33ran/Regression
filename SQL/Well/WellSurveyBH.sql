@@ -7,6 +7,4 @@ well.gx_bottom_hole_x_offset as "BH E/W Offset",
 well.gx_bottom_hole_ew_direction as "BH E/W Direction",
 well.bottom_hole_latitude as "BH Lat/X",
 well.bottom_hole_longitude as "BH Long/Y",well.gx_bottom_hole_tvd as "BH TVD"
---well.ROW_CHANGED_DATE as "Row Changed Date" 
 from dba.WELL ORDER BY "Well ID";
---with check option
