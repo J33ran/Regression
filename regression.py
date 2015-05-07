@@ -84,6 +84,10 @@ def main():
         # Configurations init
         Configuration.load(source, format)
 
+        logging.info("==============================================")
+        logging.info("Regression started...")        
+        logging.info("==============================================")
+
         start_time = time()
 
         # Execute Scripts
