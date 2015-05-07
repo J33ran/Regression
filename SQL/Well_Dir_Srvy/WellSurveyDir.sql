@@ -1,0 +1,18 @@
+select WELL_DIR_SRVY.UWI as "Well ID",WELL_DIR_SRVY.SOURCE as Source,
+    WELL_DIR_SRVY.SURVEY_ID as "Survey ID",
+    WELL_DIR_SRVY.SURVEY_DATE as "Survey Date",
+    WELL_DIR_SRVY.COMPUTE_METHOD as "Calculation Method",
+    WELL_DIR_SRVY.MAGNETIC_DECLINATION as "Magnetic Declination",
+    WELL_DIR_SRVY.GX_KOP_MD as "KOP MD",WELL_DIR_SRVY.GX_BASE_TVD as "BH TVD",
+    WELL_DIR_SRVY.GX_BASE_E_W_OFFSET as "BH E/W Offset",
+    WELL_DIR_SRVY.GX_BASE_N_S_OFFSET as "BH N/S Offset",
+    WELL_DIR_SRVY.GX_BASE_LONGITUDE as "BH Longitude",
+    WELL_DIR_SRVY.GX_BASE_LATITUDE as "BH Latitude",
+    WELL_DIR_SRVY.GX_FOOTAGE as Footage,
+    WELL_DIR_SRVY.GX_BASE_LOCATION_STRING as "S/T/R",
+    WELL_DIR_SRVY.GX_CLOSURE as Closure,
+    WELL_DIR_SRVY.CALCULATION_REQUIRED as "Calculation Required",
+    WELL_DIR_SRVY.NORTH_REFERENCE as "North Reference",
+    WELL_DIR_SRVY.ROW_CHANGED_DATE as "Row Changed Date"
+    from dba.WELL_DIR_SRVY 
+    ORDER BY "Well ID";
