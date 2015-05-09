@@ -30,6 +30,7 @@ def execute():
         Execute method.
     """
     resultfiles = []
+    threads = []
 
     for (root, dirs, files) in os.walk(Configuration.sourcedir):
         for file in files:
@@ -38,9 +39,24 @@ def execute():
             abspath = os.path.join(root, file)
             relpath = os.path.relpath(abspath, Configuration.sourcedir)
 
-            # must be single threaded so db state remain valid
-            executor = Executor(relpath, file)
-            resultfiles = resultfiles + executor.run()
+            # Resultdir
+            resdir = os.path.join(Configuration.resultdir, os.path.dirname(relpath)) 
+
+            # Create resultdir
+            if not os.path.exists(resdir):
+                os.makedirs(resdir)
+
+            e = Executor(relpath, file)
+            e.start()
+            threads.append(e)
+
+    for t in threads: 
+        t.join() 
+
+    que = Executor.get_queue()
+
+    while que.empty() != True:
+        resultfiles = resultfiles + que.get()
 
     return resultfiles
 
@@ -85,7 +101,7 @@ def main():
         Configuration.load(source, format)
 
         logging.info("==============================================")
-        logging.info("Regression started...")        
+        logging.info("Regression started...")
         logging.info("==============================================")
 
         start_time = time()

@@ -1,7 +1,5 @@
-from os import path, makedirs,system
 from configuration import Configuration
 from sqlmanager import SQLManager
-from xmlreader import XMLReader
 import logging
 import threading
 import subprocess
@@ -20,6 +18,12 @@ class Executor(threading.Thread):
     """
     Executor 
     """
+    __queue = queue.Queue()
+
+    @classmethod
+    def get_queue(cls):
+        return __queue
+
     def __init__(self, relpath, name):
         #try:
         super(Executor,self).__init__(name = name)
@@ -47,30 +51,22 @@ class Executor(threading.Thread):
             execute sql scipts and match the results
         """
 
-        resultfiles = []
-        pas = False
+        results = []
         try:
             sourcefile = path.join(Configuration.sourcedir, self.relpath)
             resultfile = path.join(Configuration.resultdir, self.relpath)
-    
-            # Test whether result exists or create one.
-            resdir = path.join(Configuration.resultdir, path.dirname(self.relpath)) 
-
-            # synchronisation locking
-            #with self.__class__.__lock:
-            if not path.exists(resdir):
-                makedirs(resdir)
 
             logging.info("Processing => %s" %(self.relpath))
-            resultfiles = SQLManager.process(sourcefile, Configuration.resultdir, self.relpath)
+            results = SQLManager.process(sourcefile, Configuration.resultdir, self.relpath)
 
             logging.info("Executing => %s" %(self.relpath))
             command(self.relpath, resultfile)
+        
+            if (results): 
+                Executor.__queue.put(results)
 
         except:
-            resultfiles = []
-        
-        return resultfiles
-        
+            results = []
 
+        #return resultfiles
 
