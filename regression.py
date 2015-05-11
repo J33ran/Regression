@@ -9,6 +9,7 @@ from threading import Thread
 from time import time
 from dispatcher import Dispatcher
 
+
 def create_logger(format):
     
     formatter = logging.Formatter(fmt=format[0], datefmt=format[1])
@@ -47,6 +48,7 @@ def execute():
                 os.makedirs(resdir)
 
             e = Executor(relpath, file)
+            #e.run()
             e.start()
             threads.append(e)
 

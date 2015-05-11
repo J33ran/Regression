@@ -3,6 +3,8 @@ from sqlmanager import SQLManager
 import logging
 import threading
 import subprocess
+import queue
+from os import path
 
 def command(relpath, resultfile):
     args = str(r'UID=') + Configuration.uid \
@@ -19,10 +21,11 @@ class Executor(threading.Thread):
     Executor 
     """
     __queue = queue.Queue()
+    __semaphore = threading.BoundedSemaphore(9)
 
     @classmethod
     def get_queue(cls):
-        return __queue
+        return cls.__queue
 
     def __init__(self, relpath, name):
         #try:
@@ -60,13 +63,15 @@ class Executor(threading.Thread):
             results = SQLManager.process(sourcefile, Configuration.resultdir, self.relpath)
 
             logging.info("Executing => %s" %(self.relpath))
-            command(self.relpath, resultfile)
+
+            with Executor.__semaphore:
+                command(self.relpath, resultfile)
         
             if (results): 
-                Executor.__queue.put(results)
+                (Executor.__queue).put(results)
 
+        except Exception as e:
+            logging.debug("executor thread exception: %s" %(e.args))
         except:
-            results = []
-
-        #return resultfiles
+            logging.debug("executor thread unexpected errro")
 
