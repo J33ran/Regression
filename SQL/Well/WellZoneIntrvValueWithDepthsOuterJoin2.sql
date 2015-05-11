@@ -12,4 +12,4 @@ b.TVDSS
 from (GX_ZONE as a,WellHeader as z)
 left outer join WELL_ZONE_INTERVAL as b on b.ZONE_NAME = a.ZONE_NAME and b.UWI = z."Well ID"
 left outer join WELL_ZONE_INTRVL_VALUE as c on c.UWI = z."Well ID" and c.ZONE_NAME = a.ZONE_NAME
-ORDER BY "Well ID";
+ORDER BY "Well ID", "Zone Name";

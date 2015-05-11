@@ -38,7 +38,8 @@ class Dispatcher(threading.Thread):
             logging.debug("Unknown exception occured")
         finally:
             status = "[Pass]" if (result == True) else "[Fail]"
-            logging.info("%s => %s" %(self.relfilename, status))
+            output = "{0:80} {1}".format(self.relfilename, status)
+            logging.info("%s" %(output))
 
             # synchronisation locking
             with  Dispatcher.__lock:

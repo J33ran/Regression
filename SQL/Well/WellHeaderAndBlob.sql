@@ -45,4 +45,4 @@
     WELL.GX_WSN as WSN,
     WELL.GX_PROPOSED_FLAG as Proposed,
     1 as "Pos Log"
-    from DBA.WELL ORDER BY "Well ID";
+    from DBA.WELL ORDER BY "Well ID", "Well Name";

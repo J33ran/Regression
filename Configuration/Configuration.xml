@@ -12,5 +12,6 @@
     <uid>dba</uid>
     <pwd>sql</pwd>
     <dbf>D:\Samples\GXDBRegression\GXDBRegression\Chuck J White Full Horizontal Demo SEG-3D 8353 9209 10004_10065RCG\gxdb.db</dbf>
+    <connections>9</connections>
   <!-- </sybase> -->
 </configuration>

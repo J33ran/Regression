@@ -19,6 +19,7 @@ class Configuration(object):
     dbf = str()
     exe = str()
     level = int()
+    connections = int()
 
     @staticmethod
     def path_exists(dir):
@@ -54,6 +55,8 @@ class Configuration(object):
             cls.path_exists(cls.resultdir)
 
             #sybase
+            cls.connections = int(reader.find(r'connections'))
+            #logging.info("Connections %d" %(cls.connections))
             cls.isql = reader.find(r'dbisql')
             cls.uid = reader.find(r'uid')
             cls.pwd = reader.find(r'pwd')

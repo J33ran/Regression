@@ -6,22 +6,22 @@ import subprocess
 import queue
 from os import path
 
-def command(relpath, resultfile):
+def make_command(relpath, resultfile):
     args = str(r'UID=') + Configuration.uid \
             + str(r';PWD=') + Configuration.pwd + str(r';DBF=') + Configuration.dbf #+ str(r'"')
 
     #command  = [Configuration.isql, r'-q', r'-c',  args, r'-onerror', r'continue', resultfile]
     command  = [Configuration.isql, r'-q', r'-c',  args, resultfile]
     logging.debug("command => %s" %(command))
-    subprocess.call(command)
-
+    return command
+    
 
 class Executor(threading.Thread):
     """
     Executor 
     """
     __queue = queue.Queue()
-    __semaphore = threading.BoundedSemaphore(9)
+    __semaphore = threading.BoundedSemaphore(value=9)#Configuration.connections)
 
     @classmethod
     def get_queue(cls):
@@ -33,6 +33,7 @@ class Executor(threading.Thread):
 
         #self.result = False
         self.relpath = relpath
+        #logging.info("Configuration.connections %d" %(Configuration.connections))
         
         #except Exception as e:
         #    logging.info("Exception => %s" %(e.args))
@@ -62,11 +63,12 @@ class Executor(threading.Thread):
             logging.info("Processing => %s" %(self.relpath))
             results = SQLManager.process(sourcefile, Configuration.resultdir, self.relpath)
 
-            logging.info("Executing => %s" %(self.relpath))
+            logging.info("Executing => %s" %(self.relpath))          
+            command = make_command(self.relpath, resultfile)
 
             with Executor.__semaphore:
-                command(self.relpath, resultfile)
-        
+                subprocess.call(command)
+    
             if (results): 
                 (Executor.__queue).put(results)
 

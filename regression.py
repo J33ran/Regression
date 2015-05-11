@@ -111,6 +111,10 @@ def main():
         # Execute Scripts
         resultfiles = execute()
 
+        logging.info("==============================================")
+        logging.info("Results...")
+        logging.info("==============================================")
+
         # Dispatch results
         pas, total = dispatch(resultfiles)
 
