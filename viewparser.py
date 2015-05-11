@@ -15,21 +15,21 @@ def usage():
 def main():
     try:
 
-        opts, args = getopt.getopt(sys.argv[1:], "hp:", ["help", "parse="])
-        filepath = str()
+        #opts, args = getopt.getopt(sys.argv[1:], "hp:", ["help", "parse="])
+        #filepath = str()
 
-        if not opts:
-            usage()
+        #if not opts:
+        #    usage()
 
-        for opt, arg in opts:
-            if opt in ("-h", "--help"): 
-                usage()
-            elif opt in  ("-p", "--parse"):
-                filepath = arg
+        #for opt, arg in opts:
+        #    if opt in ("-h", "--help"): 
+        #        usage()
+        #    elif opt in  ("-p", "--parse"):
+        #        filepath = arg
 
-        assert(filepath)
+        #assert(filepath)
 
-        #filepath = str(r'C:\Temp\View\view.xml')
+        filepath = str(r'C:\Temp\View\view.xml')
         outdir = path.dirname(filepath)
 
         root = parse(filepath).getroot()
