@@ -39,7 +39,7 @@
     WELL.ORIGINAL_OPERATOR as "Original Operator",
     WELL.LEGAL_SURVEY_TYPE as "Legal Survey Type",
     WELL.GX_LOCATION_STRING as Location,
-    WELL.GX_DEV_WELL_BLOB as "Survey Points",
+    --WELL.GX_DEV_WELL_BLOB as "Survey Points",
     WELL.COMMON_WELL_NAME as "Common Well Name",
     WELL.GGX_INTERNAL_STATUS as "Internal Status",
     WELL.GX_WSN as WSN,
