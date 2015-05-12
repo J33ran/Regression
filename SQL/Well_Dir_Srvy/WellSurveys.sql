@@ -25,4 +25,4 @@ select WELL_DIR_SRVY.UWI as "Well ID",
     WELL_DIR_SRVY_STATION.SURVEY_ID as "Survey ID",
     WELL_DIR_SRVY_STATION.STATION_ID as "Survey Point Number"
     from DBA.WELL_DIR_SRVY left outer join DBA.WELL_DIR_SRVY_STATION on(WELL_DIR_SRVY.UWI = WELL_DIR_SRVY_STATION.UWI) 
-    ORDER BY "Well ID", "Survey ID", "MD";
+    ORDER BY "Well ID", "MD", "Survey ID";
