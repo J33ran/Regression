@@ -1,0 +1,22 @@
+select WELL_TEST_ANALYSIS.UWI as "Well ID",WELL_TEST_ANALYSIS.SOURCE as Source,
+    WELL_TEST_ANALYSIS.TEST_TYPE as "Test Type",
+    WELL_TEST_ANALYSIS.RUN_NUMBER as "Run Number",
+    WELL_TEST_ANALYSIS.TEST_NUMBER as "DST ID",
+    WELL_TEST_ANALYSIS.ANALYSIS_OBS_NO as "Analysis Obs",
+    WELL_TEST_ANALYSIS.FLUID_TYPE as "Fluid Type",
+    WELL_TEST_ANALYSIS.PERIOD_TYPE as "Period Type",
+    WELL_TEST_ANALYSIS.GX_FLUID_PERCENT as "Fluid Pct",
+    WELL_TEST_ANALYSIS.GOR as GOR,WELL_TEST_ANALYSIS.H2S_PCT as "H2S Pct",
+    WELL_TEST_ANALYSIS.SULPHUR_PCT as "Sulphur Pct",
+    WELL_TEST_ANALYSIS.WATER_TEMP as "Water Temp",
+    WELL_TEST_ANALYSIS.WATER_RESISTIVITY as Rw,
+    WELL_TEST_ANALYSIS.OIL_GRAVITY as "Oil Gravity"
+    from dba.WELL_TEST_ANALYSIS
+    ORDER BY "Well ID"
+    , Source
+    , "Test Type"
+    , "Run Number"
+    , "DST ID"
+    , "Fluid Type"
+    ;
+    

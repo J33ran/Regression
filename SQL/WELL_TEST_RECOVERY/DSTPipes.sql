@@ -1,0 +1,21 @@
+select WELL_TEST_RECOVERY.UWI as "Well ID",
+    WELL_TEST_RECOVERY.TEST_TYPE as "Test Type",
+    WELL_TEST_RECOVERY.TEST_NUMBER as "DST ID",WELL_TEST_RECOVERY.SOURCE as Source,
+    WELL_TEST_RECOVERY.RECOVERY_METHOD as Method,
+    WELL_TEST_RECOVERY.RECOVERY_AMT as Amount,
+    WELL_TEST_RECOVERY.RECOVERY_AMT_UOM as Unit,
+    WELL_TEST_RECOVERY.RECOVERY_TYPE as Description,
+    WELL_TEST_RECOVERY.REMARK as Remarks,
+    WELL_TEST_RECOVERY.RECOVERY_OBS_NO as "Obs. No.",
+    WELL_TEST_RECOVERY.RUN_NUMBER as "Run Number"
+    from dba.WELL_TEST_RECOVERY
+    where WELL_TEST_RECOVERY.TEST_TYPE = 'DST'
+    and WELL_TEST_RECOVERY.RECOVERY_METHOD = 'PIPE'
+    ORDER BY "Well ID"
+    , "DST ID"
+    , "Test Type"
+    , "Source"
+    , "Run Number"
+    , "Obs. No."
+    , Method
+    ;
