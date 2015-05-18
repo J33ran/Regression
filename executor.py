@@ -60,10 +60,13 @@ class Executor(threading.Thread):
             sourcefile = path.join(Configuration.sourcedir, self.relpath)
             resultfile = path.join(Configuration.resultdir, self.relpath)
 
-            logging.info("Processing => %s" %(self.relpath))
+            output = "{0:80} {1}".format(self.relpath, "[Processing]")
+            logging.info("%s" %(output))
             results = SQLManager.process(sourcefile, Configuration.resultdir, self.relpath)
 
-            logging.info("Executing => %s" %(self.relpath))          
+            
+            output = "{0:80} {1}".format(self.relpath, "[Executing]")
+            logging.info("%s" %(output))
             command = make_command(self.relpath, resultfile)
 
             with Executor.__semaphore:

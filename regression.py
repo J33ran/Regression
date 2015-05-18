@@ -102,28 +102,32 @@ def main():
         # Configurations init
         Configuration.load(source, format)
 
-        logging.info("==============================================")
-        logging.info("Regression started...")
-        logging.info("==============================================")
+        logging.info("="*100)
+        logging.info("Regression started")
+        logging.info("="*100)
+        
 
         start_time = time()
 
         # Execute Scripts
         resultfiles = execute()
 
-        logging.info("==============================================")
-        logging.info("Results...")
-        logging.info("==============================================")
+        
+        logging.info("="*100)
+        logging.info("Results")
+        logging.info("="*100)
+        
 
         # Dispatch results
         pas, total = dispatch(resultfiles)
 
         total_time = time() - start_time
 
-        logging.info("==============================================")
+        
+        logging.info("="*100)
         logging.info("%d passed out of %d" %(pas, total))
         logging.info("Total elapsed time(secs) %.2f" %(total_time))
-        logging.info("==============================================")
+        logging.info("="*100)
 
     except (getopt.GetoptError, Exception) as e:
         logging.info("Exception %s" %str(e))
