@@ -52,7 +52,7 @@ class Configuration(object):
             cls.path_exists(cls.expecteddir)
             cls.path_exists(cls.sourcedir)
             cls.path_exists(cls.logdir)
-            cls.path_exists(cls.resultdir)
+            #cls.path_exists(cls.resultdir)
 
             #sybase
             cls.connections = int(reader.find(r'connections'))
