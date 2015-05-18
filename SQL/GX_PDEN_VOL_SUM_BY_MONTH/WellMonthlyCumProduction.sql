@@ -31,3 +31,4 @@ select GX_PDEN_VOL_SUM_BY_MONTH.UWI as "Well ID",
 	, "Zone"
 	, "Date"
 	, "Activity Type"
+    ;
