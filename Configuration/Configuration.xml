@@ -8,10 +8,11 @@
     <source>D:\Samples\GXDBRegression\GXDBRegression\SQL</source>
   <!-- </regression> -->
   <!-- <sybase> -->
-    <dbisql>C:\Program Files (x86)\GeoGraphix\SQL Anywhere 12\BIN32\dbisql.com</dbisql>
+    <semaphore>9</semaphore>
     <uid>dba</uid>
     <pwd>sql</pwd>
+    <dbisql>C:\Program Files (x86)\GeoGraphix\SQL Anywhere 12\BIN32\dbisql.com</dbisql>
     <dbf>D:\Samples\GXDBRegression\GXDBRegression\Chuck J White Full Horizontal Demo SEG-3D 8353 9209 10004_10065RCG\gxdb.db</dbf>
-    <connections>9</connections>
+    <!--<dbf>D:\GXDBProjects\Eagle Ford\GXDB.db</dbf>-->
   <!-- </sybase> -->
 </configuration>

@@ -21,20 +21,22 @@ class Executor(threading.Thread):
     Executor 
     """
     __queue = queue.Queue()
-    __semaphore = threading.BoundedSemaphore(value=9)#Configuration.connections)
+    __semaphore = None
 
     @classmethod
     def get_queue(cls):
         return cls.__queue
 
-    def __init__(self, relpath, name):
+    def __init__(self, relpath, name, semaphore):
         #try:
         super(Executor,self).__init__(name = name)
 
+
         #self.result = False
         self.relpath = relpath
-        #logging.info("Configuration.connections %d" %(Configuration.connections))
-        
+        if Executor.__semaphore is None:
+            Executor.__semaphore = semaphore
+                    
         #except Exception as e:
         #    logging.info("Exception => %s" %(e.args))
         #except:
@@ -60,18 +62,15 @@ class Executor(threading.Thread):
             sourcefile = path.join(Configuration.sourcedir, self.relpath)
             resultfile = path.join(Configuration.resultdir, self.relpath)
 
-            output = "{0:80} {1}".format(self.relpath, "[Processing]")
+            output = "{0:80} {1}".format(self.relpath, "[Started]")
             logging.info("%s" %(output))
             results = SQLManager.process(sourcefile, Configuration.resultdir, self.relpath)
 
-            
-            output = "{0:80} {1}".format(self.relpath, "[Executing]")
-            logging.info("%s" %(output))
             command = make_command(self.relpath, resultfile)
 
             with Executor.__semaphore:
                 subprocess.call(command)
-    
+                
             if (results): 
                 (Executor.__queue).put(results)
 
@@ -80,3 +79,5 @@ class Executor(threading.Thread):
         except:
             logging.debug("executor thread unexpected errro")
 
+        output = "{0:80} {1}".format(self.relpath, "[Finished]")
+        logging.info("%s" %(output))

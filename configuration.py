@@ -19,7 +19,7 @@ class Configuration(object):
     dbf = str()
     exe = str()
     level = int()
-    connections = int()
+    semaphore = int()
 
     @staticmethod
     def path_exists(dir):
@@ -55,8 +55,7 @@ class Configuration(object):
             #cls.path_exists(cls.resultdir)
 
             #sybase
-            cls.connections = int(reader.find(r'connections'))
-            #logging.info("Connections %d" %(cls.connections))
+            cls.semaphore = int(reader.find(r'semaphore'))
             cls.isql = reader.find(r'dbisql')
             cls.uid = reader.find(r'uid')
             cls.pwd = reader.find(r'pwd')
@@ -73,7 +72,7 @@ class Configuration(object):
             if not isinstance(cls.level, int):
                 raise Exception("Invalid log value")
 
-            fh  = logging.FileHandler(str(r"{0}\regression.log".format(cls.logdir)))
+            fh  = logging.FileHandler(str(r"{0}\regression.log".format(cls.logdir)), mode='w')
             fh.setLevel(cls.level)
 
             formatter = logging.Formatter(fmt=format[0], datefmt=format[1])

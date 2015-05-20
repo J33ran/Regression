@@ -8,6 +8,7 @@ import threading
 class Dispatcher(threading.Thread):
     __total = 0
     __pass = 0
+    __semaphore = None
     __lock = threading.Lock()
 
     @classmethod
@@ -18,12 +19,16 @@ class Dispatcher(threading.Thread):
     def get_pass(cls):
         return cls.__pass
 
-    def __init__(self, name, expectfile, resultfile, relfilename):
+    def __init__(self, name, expectfile, resultfile, relfilename, semaphore):
         super(Dispatcher, self).__init__(name = name)
 
         self.resultfile = resultfile
         self.expectfile = expectfile
         self.relfilename = relfilename
+
+        if Dispatcher.__semaphore is None:
+             Dispatcher.__semaphore = semaphore
+             
 
     def run(self):
         """
@@ -31,8 +36,10 @@ class Dispatcher(threading.Thread):
         """
         result = False
         try:
+            logging.debug("Comparing => %s" %(self.name))
 
-            result = XMLReader.compare(self.expectfile, self.resultfile)
+            with Dispatcher.__semaphore:
+                result = XMLReader.compare(self.expectfile, self.resultfile)
 
         except:
             logging.debug("Unknown exception occured")

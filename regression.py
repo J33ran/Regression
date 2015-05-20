@@ -8,6 +8,7 @@ from configuration import Configuration
 from threading import Thread
 from time import time
 from dispatcher import Dispatcher
+import threading
 
 
 def create_logger(format):
@@ -32,6 +33,7 @@ def execute():
     """
     resultfiles = []
     threads = []
+    semaphore = threading.BoundedSemaphore(value=Configuration.semaphore)
 
     for (root, dirs, files) in os.walk(Configuration.sourcedir):
         for file in files:
@@ -47,8 +49,7 @@ def execute():
             if not os.path.exists(resdir):
                 os.makedirs(resdir)
 
-            e = Executor(relpath, file)
-            #e.run()
+            e = Executor(relpath, file, semaphore)
             e.start()
             threads.append(e)
 
@@ -65,11 +66,13 @@ def execute():
 def dispatch(resultfiles):
 
     threads = []
+    semaphore = threading.BoundedSemaphore(value=Configuration.semaphore)
+
     for result in resultfiles:
         expectfile = os.path.join(Configuration.expecteddir, result)
         resultfile = os.path.join(Configuration.resultdir, result)
 
-        t = Dispatcher("", expectfile, resultfile, result)
+        t = Dispatcher(result, expectfile, resultfile, result, semaphore)
         t.start()
         threads.append(t)
                 
