@@ -6,6 +6,10 @@ import threading
 #get_loglevel = Configuration.get_loglevel
 
 class Dispatcher(threading.Thread):
+    """
+        An interface derived from threading.Thread.
+        It manages life cycle of dispatch threads.
+    """
     __total = 0
     __pass = 0
     __semaphore = None
@@ -20,6 +24,11 @@ class Dispatcher(threading.Thread):
         return cls.__pass
 
     def __init__(self, name, expectfile, resultfile, relfilename, semaphore):
+        """
+            Class constructor initailses result,
+            expected files and synchronisation 
+            semaphores.            
+        """
         super(Dispatcher, self).__init__(name = name)
 
         self.resultfile = resultfile
@@ -32,7 +41,9 @@ class Dispatcher(threading.Thread):
 
     def run(self):
         """
-            execute sql scipts and match the results
+            Its a thread main function.
+            Mainly,  compares XML provided files.
+            Execution is synchronised using two semaphores.
         """
         result = False
         try:

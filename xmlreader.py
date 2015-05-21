@@ -8,7 +8,8 @@ import logging
 
 class XMLReader(object):
     """
-    XMLReader
+        An interface reading and comparing
+        xmls.
     """
     def __init__(self,filename):
         assert(filename)
@@ -19,7 +20,7 @@ class XMLReader(object):
 
     def find(self,element):
         """
-            find(element) in tree.
+            Find(element) in tree.
             returns *element* text or empty str()
         """
         assert(element)
@@ -30,7 +31,7 @@ class XMLReader(object):
     @staticmethod 
     def compare_tree(ltree, rtree):
         """
-            compares two xml(param1,param2) tree.
+            Compares two xml(param1,param2) tree.
             returns True if both trees are equal.
         """
         
@@ -73,7 +74,7 @@ class XMLReader(object):
             :param x2: the second xml file.
             :return:
                 True if both files match.
-            """
+        """
         equal = False
         try:
             ltree = XMLReader(lfile).getroot()

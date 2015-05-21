@@ -6,13 +6,15 @@ import logging
 from executor import Executor
 from configuration import Configuration
 from threading import Thread
-from time import time
 from dispatcher import Dispatcher
 import threading
+import time
 
 
 def create_logger(format):
-    
+    """
+        Constructs output stream logger.
+    """
     formatter = logging.Formatter(fmt=format[0], datefmt=format[1])
     logging.getLogger('').setLevel(logging.DEBUG)
 
@@ -24,12 +26,17 @@ def create_logger(format):
 
 
 def usage():
+    """
+        Construct and raise Optional error 
+        w.r.t command help.
+    """
     smesg =("Help: -c or --config=configuration.xml") 
     raise getopt.GetoptError(smesg)
 
 def execute():
     """
-        Execute method.
+       Create execution semaphore and threads.
+       Join threads and returns result files. 
     """
     resultfiles = []
     threads = []
@@ -64,7 +71,10 @@ def execute():
     return resultfiles
 
 def dispatch(resultfiles):
-
+    """
+       Create dispatch semaphore and threads.
+       Join threads and returns dispatch status.
+    """
     threads = []
     semaphore = threading.BoundedSemaphore(value=Configuration.semaphore)
 
@@ -83,6 +93,9 @@ def dispatch(resultfiles):
     return(Dispatcher.get_pass(), Dispatcher.get_total())
 
 def main():
+    """
+       As per Main method, defines sequence of program.
+    """
     try:
         format = ['%(asctime)s  %(message)s', '%Y-%m-%d %H:%M:%S']
         resultfiles = []
@@ -110,7 +123,7 @@ def main():
         logging.info("="*100)
         
 
-        start_time = time()
+        start_time = time.clock()
 
         # Execute Scripts
         resultfiles = execute()
@@ -124,7 +137,7 @@ def main():
         # Dispatch results
         pas, total = dispatch(resultfiles)
 
-        total_time = time() - start_time
+        total_time = time.clock() - start_time
 
         
         logging.info("="*100)

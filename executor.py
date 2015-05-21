@@ -7,6 +7,9 @@ import queue
 from os import path
 
 def make_command(relpath, resultfile):
+    """
+       return dbisql command to run scripts
+    """
     args = str(r'UID=') + Configuration.uid \
             + str(r';PWD=') + Configuration.pwd + str(r';DBF=') + Configuration.dbf #+ str(r'"')
 
@@ -18,7 +21,8 @@ def make_command(relpath, resultfile):
 
 class Executor(threading.Thread):
     """
-    Executor 
+        An interface derived from threading.Thread
+        manages sql scrpits execution lifecycle.
     """
     __queue = queue.Queue()
     __semaphore = None
@@ -28,7 +32,11 @@ class Executor(threading.Thread):
         return cls.__queue
 
     def __init__(self, relpath, name, semaphore):
-        #try:
+        """
+          Constructor mainly initialises sql
+          script path and semaphore
+        """
+
         super(Executor,self).__init__(name = name)
 
 
@@ -54,7 +62,11 @@ class Executor(threading.Thread):
 
     def run(self):
         """
-            execute sql scipts and match the results
+            Mainly, procsses sqlscripts and generates
+            executable scripts. Later, executale scripts 
+            are feed in to dbisql for results. Maximum
+            concurrent dbisql connections are synchronised
+            using semaphore.
         """
 
         results = []

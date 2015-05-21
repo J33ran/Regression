@@ -13,6 +13,11 @@ def usage():
 
 
 def main():
+    """
+        Mainly, parses output(SYSView) xml file
+        and creates respective views sql scripts
+        in targeted folder.
+    """
     try:
 
         #opts, args = getopt.getopt(sys.argv[1:], "hp:", ["help", "parse="])

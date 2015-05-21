@@ -6,10 +6,16 @@ import sqlparse
 from os import path
 
 class SQLManager(object):
-
+    """
+        An interface to sql reading, writing 
+        and transformation.
+    """
     @classmethod
     def read(cls, sqlfile):
-
+        """
+            Returns a memory buffer of
+            disk sql script.
+        """
         # Open and read the file as a single buffer
         assert(sqlfile)
         buffer = object()
@@ -20,7 +26,10 @@ class SQLManager(object):
     
     @classmethod
     def write(cls, resultfile, sqls):
-
+        """
+            Writes a sql memory buffer
+            to disk.
+        """
         # Open and read the file as a single buffer
         assert(resultfile)
         with open(resultfile, 'w') as fd:
@@ -29,7 +38,11 @@ class SQLManager(object):
 
     @classmethod
     def process(cls, sqlfile, resultdir, relpath):
-        
+        """
+          Process disk sql script and transforms
+          as per SQL statements. Transformed sql
+          is written on disk for execution.
+        """
         outfiles = []
         sqls = []
         resultfile = path.join(resultdir, relpath)
@@ -58,7 +71,9 @@ class SQLManager(object):
     @classmethod
     def transform(cls, sqlbuffer):
         """
-        transform sql scripts into list.
+          Transforms sql buffer and appends
+          output statements so output is generated 
+          during execution.
         """
         try:
 

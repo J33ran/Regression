@@ -7,7 +7,7 @@ import logging
 
 class Configuration(object):
     """
-    Configuration
+        An interface to read user settings
     """
     expecteddir = str()
     sourcedir = str()
@@ -37,6 +37,10 @@ class Configuration(object):
 
     @classmethod
     def load(cls, filename, format):
+        """
+            It loads and validates user settings.
+            Moreover, initialises file logger.
+        """
         try:
             reader = XMLReader(filename)
 
