@@ -2,9 +2,9 @@
 <configuration>
   <!-- <regression> -->
     <loglevel>DEBUG</loglevel>
-    <log>C:\Temp</log>
-    <expected>D:\Samples\GXDBRegression\GXDBRegression\Expected</expected>
-    <result>D:\Samples\GXDBRegression\GXDBRegression\Results</result>
+    <log>D:\Samples\GXDBRegression\GXDBRegression\ChuckJ</log>
+    <expected>D:\Samples\GXDBRegression\GXDBRegression\ChuckJ\Expected</expected>
+    <result>D:\Samples\GXDBRegression\GXDBRegression\ChuckJ\Results</result>
     <source>D:\Samples\GXDBRegression\GXDBRegression\SQL</source>
   <!-- </regression> -->
   <!-- <sybase> -->
@@ -12,9 +12,13 @@
     <uid>dba</uid>
     <pwd>sql</pwd>
     <dbisql>C:\Program Files (x86)\GeoGraphix\SQL Anywhere 12\BIN32\dbisql.com</dbisql>
-    <!--
     <dbf>D:\Samples\GXDBRegression\GXDBRegression\Chuck J White Full Horizontal Demo SEG-3D 8353 9209 10004_10065RCG\gxdb.db</dbf>
+    
+    <!--
+      <dbf>D:\GXDBProjects\Eagle Ford\GXDB.db</dbf>
     -->
-    <dbf>D:\GXDBProjects\Eagle Ford\GXDB.db</dbf>
+    
+
+    
   <!-- </sybase> -->
 </configuration>

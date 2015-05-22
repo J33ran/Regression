@@ -2,7 +2,7 @@
 It defines XMLReader class which primarily 
 features xml's loading and parsing funtionality.
 """
-from xml.etree.ElementTree  import parse
+from xml.etree.ElementTree  import parse, iterparse
 import xml.etree.ElementTree
 import logging
 
@@ -29,9 +29,9 @@ class XMLReader(object):
         
 
     @staticmethod 
-    def compare_tree(ltree, rtree):
+    def compare_row(ltree, rtree):
         """
-            Compares two xml(param1,param2) tree.
+            Compares two xml tree (param1,param2) tree.
             returns True if both trees are equal.
         """
         
@@ -57,14 +57,15 @@ class XMLReader(object):
         #    logging.debug('tail: %r != %r' % (x1.tail, x2.tail))
         #    return False
 
-        cl1 = ltree.getchildren()
-        cl2 = rtree.getchildren()
+        #cl1 = ltree.getchildren()
+        #cl2 = rtree.getchildren()
 
-        if len(cl1) != len(cl2):
-            raise Exception("children length differs, {0} != {1}".format(len(cl1), len(cl2)))
+        #print("children = ", len(cl1))
+        #if len(cl1) != len(cl2):
+        #    raise Exception("children length differs, {0} != {1}".format(len(cl1), len(cl2)))
                 
-        for c1, c2 in zip(cl1, cl2):               
-            XMLReader.compare_tree(c1, c2)
+        #for c1, c2 in zip(cl1, cl2):               
+        #    XMLReader.compare_rowc1, c2)
 
     @classmethod
     def compare(cls, lfile, rfile):
@@ -77,12 +78,46 @@ class XMLReader(object):
         """
         equal = False
         try:
-            ltree = XMLReader(lfile).getroot()
-            rtree= XMLReader(rfile).getroot()
+            # get an iterable
+            rcontext = iterparse(rfile, events=("start", "end"))
 
-            XMLReader.compare_tree(ltree, rtree)
+            # turn it into an iterator
+            rcontext = iter(rcontext)
+
+            # get the root element
+            revent, rroot = next(rcontext)
+            rroot.clear()
+
+            # get an iterable
+            lcontext = iterparse(lfile, events=("start", "end"))
+
+            # turn it into an iterator
+            lcontext = iter(lcontext)
+
+            # get the root element
+            levent, lroot = next(lcontext)
+            lroot.clear()
+
+            for (levent, lelem), (revent, relem) in zip (lcontext, rcontext):
+
+                if (levent != revent):
+                     raise Exception("mismatch events : {0} != {1}".format(levent, revent))
+
+                if (levent == "end" and lelem.tag  == 'row'):
+                    lrow  = lelem.getchildren()
+                    rrow  = relem.getchildren()
+
+                    if (len(lrow) != len(rrow)):
+                          raise Exception("children length differs, {0} != {1}".format(len(lrow), len(rrow)))
+
+                    for l,r in zip(lrow, rrow):
+                        XMLReader.compare_row(l, r)
+
+                    lelem.clear()
+                    relem.clear()
+
+            # As each phase is Ok, so equal = True
             equal = True
-
         except Exception as e:
             logging.debug("Exception occured in XML compare %s" %(e))
         except:
@@ -90,3 +125,31 @@ class XMLReader(object):
 
         return equal
 
+if __name__  == "__main__":
+
+    import time
+
+    #lfile= str(r"D:\Samples\GXDBRegression\GXDBRegression\Results\FORMATION\FormationSources.sql_1.xml")
+    #rfile = str(r"D:\Samples\GXDBRegression\GXDBRegression\Results\FORMATION\FormationSources.sql_1.xml")
+    #####################################################################################################
+    #lfile= str(r"D:\Samples\GXDBRegression\GXDBRegression\Results\FORMATION\OrderedFormations.sql_1.xml")
+    #rfile= str(r"D:\Samples\GXDBRegression\GXDBRegression\Results\FORMATION\OrderedFormations.sql_1.xml")
+    lfile = str("D:\Samples\GXDBRegression\GXDBRegression\Expected\WELL_ZONE_INTERVAL\WellZoneIntrvValueWithDepthsOuterJoin2.sql_1.xml")
+    rfile = str("D:\Samples\GXDBRegression\GXDBRegression\Results\WELL_ZONE_INTERVAL\WellZoneIntrvValueWithDepthsOuterJoin2.sql_1.xml")
+    
+    start_time = time.clock()
+
+    try:
+            
+        equal = XMLReader.compare(lfile, rfile)
+
+    except Exception as e:
+        print("Exception occured %s" %(e))
+    except:
+         print ("Exception occured");
+
+    total_time = time.clock() - start_time
+    print ("finished (secs) %.2f" %(total_time))
+      
+    
+    
