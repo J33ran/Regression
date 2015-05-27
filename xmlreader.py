@@ -39,12 +39,12 @@ class XMLReader(object):
         if (ltree.tag != rtree.tag):
             raise Exception("Tags do not match:{0} and {1}".format (ltree.tag, rtree.tag))
                 
-        # test ltree attribute for each rtree attribute 
+        # test rtree attribute for each ltree attribute 
         for name, value in ltree.attrib.items():
-          if (ltree.attrib.get(name) != value):
+          if (rtree.attrib.get(name) != value):
                 raise Exception("Attributes do not match: {0}={1}, {2|={3}" .format(name, value, name, rtree.attrib.get(name)))
 
-        # All rtree attibs are must ltree attributes
+        # All rtree attributes are must ltree attributes
         for name in rtree.attrib.keys():
                 if name not in ltree.attrib:
                     raise Exception("rtree has an attribute ltree is missing: {0}".format(name))
