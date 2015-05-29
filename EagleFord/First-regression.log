@@ -1,0 +1,607 @@
+2015-05-25 08:55:58  ====================================================================================================
+2015-05-25 08:55:58  Regression started
+2015-05-25 08:55:58  ====================================================================================================
+2015-05-25 08:55:58  CASING\WellCasing.sql                                                            [Started]
+2015-05-25 08:55:58  FORMATION\DistinctFormationAli.sql                                               [Started]
+2015-05-25 08:55:58  FORMATION\DistinctFormations.sql                                                 [Started]
+2015-05-25 08:55:58  FORMATION\DistinctFormationsWithActive.sql                                       [Started]
+2015-05-25 08:55:58  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\FORMATION\\DistinctFormationAli.sql']
+2015-05-25 08:55:58  FORMATION\FormationLookup.sql                                                    [Started]
+2015-05-25 08:55:58  FORMATION\FormationSources.sql                                                   [Started]
+2015-05-25 08:55:58  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\FORMATION\\DistinctFormationsWithActive.sql']
+2015-05-25 08:55:58  FORMATION\OrderedFormations.sql                                                  [Started]
+2015-05-25 08:55:58  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\FORMATION\\DistinctFormations.sql']
+2015-05-25 08:55:58  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\CASING\\WellCasing.sql']
+2015-05-25 08:55:58  GGX_MICROSEISMIC_MSEVENT\MicroseismicEvents.sql                                  [Started]
+2015-05-25 08:55:58  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\FORMATION\\FormationLookup.sql']
+2015-05-25 08:55:58  GGX_MICROSEISMIC_PRESSURE\MicroseismicPressures.sql                              [Started]
+2015-05-25 08:55:58  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\FORMATION\\FormationSources.sql']
+2015-05-25 08:55:58  GX_PDEN_VOL_SUM_BY_MONTH\AllocatedMonthlyProduction.sql                          [Started]
+2015-05-25 08:55:58  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\GGX_MICROSEISMIC_MSEVENT\\MicroseismicEvents.sql']
+2015-05-25 08:55:58  GX_PDEN_VOL_SUM_BY_MONTH\AllocatedMonthlyProductionTest.sql                      [Started]
+2015-05-25 08:55:58  GX_PDEN_VOL_SUM_BY_MONTH\WellCumulativeProduction.sql                            [Started]
+2015-05-25 08:55:59  GX_PDEN_VOL_SUM_BY_MONTH\WellMonthlyCumProduction.sql                            [Started]
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\FORMATION\\OrderedFormations.sql']
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\GGX_MICROSEISMIC_PRESSURE\\MicroseismicPressures.sql']
+2015-05-25 08:55:59  GX_PDEN_VOL_SUM_BY_MONTH\WellMonthlyProduction.sql                               [Started]
+2015-05-25 08:55:59  GX_PDEN_VOL_SUM_BY_MONTH\WellMonthlyProductionByZoneAli.sql                      [Started]
+2015-05-25 08:55:59  GX_PDEN_VOL_SUM_BY_MONTH\WellMonthlyYTDProduction.sql                            [Started]
+2015-05-25 08:55:59  GX_PDEN_VOL_SUM_BY_MONTH\WellProduction.sql                                      [Started]
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\GX_PDEN_VOL_SUM_BY_MONTH\\AllocatedMonthlyProductionTest.sql']
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\GX_PDEN_VOL_SUM_BY_MONTH\\AllocatedMonthlyProduction.sql']
+2015-05-25 08:55:59  GX_PRODUCTION_TEST\WellProductionTest.sql                                        [Started]
+2015-05-25 08:55:59  GX_WELL_SYNTHETIC\VelocitySurveysWithSynthetics.sql                              [Started]
+2015-05-25 08:55:59  GX_WELL_SYNTHETIC\WellSynthetic.sql                                              [Started]
+2015-05-25 08:55:59  GX_ZATTRIBUTE\GXZAttribute.sql                                                   [Started]
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\GX_WELL_SYNTHETIC\\WellSynthetic.sql']
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\GX_WELL_SYNTHETIC\\VelocitySurveysWithSynthetics.sql']
+2015-05-25 08:55:59  GX_ZONE\GXZone.sql                                                               [Started]
+2015-05-25 08:55:59  GX_ZONE\WellZoneAttributeValues.sql                                              [Started]
+2015-05-25 08:55:59  GX_ZONE\WellZoneIntrvValueWithDepthsOuterJoin2.sql                               [Started]
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\GX_PRODUCTION_TEST\\WellProductionTest.sql']
+2015-05-25 08:55:59  GX_ZONE_ZATTRIBUTE\GXZoneZAttribute.sql                                          [Started]
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\GX_ZATTRIBUTE\\GXZAttribute.sql']
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\GX_PDEN_VOL_SUM_BY_MONTH\\WellMonthlyYTDProduction.sql']
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\GX_PDEN_VOL_SUM_BY_MONTH\\WellProduction.sql']
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\GX_PDEN_VOL_SUM_BY_MONTH\\WellMonthlyProductionByZoneAli.sql']
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\GX_PDEN_VOL_SUM_BY_MONTH\\WellMonthlyProduction.sql']
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\GX_PDEN_VOL_SUM_BY_MONTH\\WellCumulativeProduction.sql']
+2015-05-25 08:55:59  R_SOURCE\DistinctSources.sql                                                     [Started]
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\GX_ZONE\\WellZoneIntrvValueWithDepthsOuterJoin2.sql']
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\GX_ZONE\\GXZone.sql']
+2015-05-25 08:55:59  R_SOURCE\FaultsSources.sql                                                       [Started]
+2015-05-25 08:55:59  R_SOURCE\FormationsOrderedBySource.sql                                           [Started]
+2015-05-25 08:55:59  R_SOURCE\FormationSources.sql                                                    [Started]
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\GX_ZONE_ZATTRIBUTE\\GXZoneZAttribute.sql']
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\R_SOURCE\\DistinctSources.sql']
+2015-05-25 08:55:59  STRATIGRAPHIC_COLUMN\STRATIGRAPHIC_COLUMN.sql                                    [Started]
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\R_SOURCE\\FaultsSources.sql']
+2015-05-25 08:55:59  TUBING\WellTubing.sql                                                            [Started]
+2015-05-25 08:55:59  WELL\DSS_Well.sql                                                                [Started]
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\R_SOURCE\\FormationSources.sql']
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\GX_PDEN_VOL_SUM_BY_MONTH\\WellMonthlyCumProduction.sql']
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\GX_ZONE\\WellZoneAttributeValues.sql']
+2015-05-25 08:55:59  WELL\LocationGeodatic.sql                                                        [Started]
+2015-05-25 08:55:59  WELL\WellDataPresent.sql                                                         [Started]
+2015-05-25 08:55:59  WELL\WellHeader.sql                                                              [Started]
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL\\DSS_Well.sql']
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\R_SOURCE\\FormationsOrderedBySource.sql']
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\STRATIGRAPHIC_COLUMN\\STRATIGRAPHIC_COLUMN.sql']
+2015-05-25 08:55:59  WELL\WellHeaderAndBlob.sql                                                       [Started]
+2015-05-25 08:55:59  WELL\WellHeaderAndLocation.sql                                                   [Started]
+2015-05-25 08:55:59  WELL\WellHederWithRemarks.sql                                                    [Started]
+2015-05-25 08:55:59  WELL\WellStatuses.sql                                                            [Started]
+2015-05-25 08:55:59  WELL\WellSurveyBH.sql                                                            [Started]
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\TUBING\\WellTubing.sql']
+2015-05-25 08:55:59  WELL\WellSurveyPicks.sql                                                         [Started]
+2015-05-25 08:55:59  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL\\LocationGeodatic.sql']
+2015-05-25 08:55:59  WELL\WellZoneAttributeValues.sql                                                 [Started]
+2015-05-25 08:55:59  WELL\WellZoneIntrvValueWithDepthsOuterJoin2.sql                                  [Started]
+2015-05-25 08:56:00  WELL\Workovers.sql                                                               [Started]
+2015-05-25 08:56:00  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL\\WellHeader.sql']
+2015-05-25 08:56:00  WELL\WorkoversCAP.sql                                                            [Started]
+2015-05-25 08:56:00  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL\\WellSurveyBH.sql']
+2015-05-25 08:56:00  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL\\WellStatuses.sql']
+2015-05-25 08:56:00  WELL_CHECKSHOT_DETAIL\WellCheckshotDetail.sql                                    [Started]
+2015-05-25 08:56:00  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL\\WellHeaderAndBlob.sql']
+2015-05-25 08:56:00  WELL_CHECKSHOT_DETAIL\WellVelocities.sql                                         [Started]
+2015-05-25 08:56:00  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL\\WellHeaderAndLocation.sql']
+2015-05-25 08:56:00  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL\\WellHederWithRemarks.sql']
+2015-05-25 08:56:00  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL\\WellSurveyPicks.sql']
+2015-05-25 08:56:00  WELL_CHECKSHOT_SURVEY\VelocitySurveysWithSynthetics.sql                          [Started]
+2015-05-25 08:56:00  WELL_CHECKSHOT_SURVEY\WellCheckshotSurvey.sql                                    [Started]
+2015-05-25 08:56:00  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL\\WellZoneAttributeValues.sql']
+2015-05-25 08:56:00  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL\\WellZoneIntrvValueWithDepthsOuterJoin2.sql']
+2015-05-25 08:56:00  WELL_CORE\WellCoreDesc.sql                                                       [Started]
+2015-05-25 08:56:00  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_CHECKSHOT_DETAIL\\WellCheckshotDetail.sql']
+2015-05-25 08:56:00  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_CHECKSHOT_DETAIL\\WellVelocities.sql']
+2015-05-25 08:56:00  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL\\WorkoversCAP.sql']
+2015-05-25 08:56:00  WELL_CORE_SAMPLE_ANAL\WellCoreAnalysis.sql                                       [Started]
+2015-05-25 08:56:00  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL\\Workovers.sql']
+2015-05-25 08:56:00  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_CHECKSHOT_SURVEY\\VelocitySurveysWithSynthetics.sql']
+2015-05-25 08:56:00  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL\\WellDataPresent.sql']
+2015-05-25 08:56:00  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_CHECKSHOT_SURVEY\\WellCheckshotSurvey.sql']
+2015-05-25 08:56:00  WELL_DIR_PROPOSED_SRVY\WellProposedSurveyDir.sql                                 [Started]
+2015-05-25 08:56:00  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_CORE\\WellCoreDesc.sql']
+2015-05-25 08:56:00  WELL_DIR_PROPOSED_SRVY_STATION\ProposedSurveyStations.sql                        [Started]
+2015-05-25 08:56:01  WELL_DIR_SRVY\DSS_Well.sql                                                       [Started]
+2015-05-25 08:56:01  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_DIR_PROPOSED_SRVY\\WellProposedSurveyDir.sql']
+2015-05-25 08:56:01  WELL_DIR_SRVY\WellDataPresent.sql                                                [Started]
+2015-05-25 08:56:01  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_DIR_PROPOSED_SRVY_STATION\\ProposedSurveyStations.sql']
+2015-05-25 08:56:01  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_CORE_SAMPLE_ANAL\\WellCoreAnalysis.sql']
+2015-05-25 08:56:01  WELL_DIR_SRVY\WellSurveyDir.sql                                                  [Started]
+2015-05-25 08:56:01  WELL_DIR_SRVY\WellSurveys.sql                                                    [Started]
+2015-05-25 08:56:01  WELL_DIR_SRVY\Workovers.sql                                                      [Started]
+2015-05-25 08:56:01  WELL_DIR_SRVY\Workovers12.sql                                                    [Started]
+2015-05-25 08:56:01  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_DIR_SRVY\\DSS_Well.sql']
+2015-05-25 08:56:01  WELL_DIR_SRVY\WorkoversCAP.sql                                                   [Started]
+2015-05-25 08:56:01  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_DIR_SRVY\\WellSurveyDir.sql']
+2015-05-25 08:56:01  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_DIR_SRVY\\Workovers.sql']
+2015-05-25 08:56:01  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_DIR_SRVY\\WellSurveys.sql']
+2015-05-25 08:56:01  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_DIR_SRVY\\Workovers12.sql']
+2015-05-25 08:56:01  WELL_DIR_SRVY_STATION\DSS_SurveyStations.sql                                     [Started]
+2015-05-25 08:56:01  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_DIR_SRVY\\WorkoversCAP.sql']
+2015-05-25 08:56:01  WELL_DIR_SRVY_STATION\SurveyStations.sql                                         [Started]
+2015-05-25 08:56:01  WELL_DIR_SRVY_STATION\WellDataPresent.sql                                        [Started]
+2015-05-25 08:56:01  WELL_DIR_SRVY_STATION\WellSurveys.sql                                            [Started]
+2015-05-25 08:56:01  WELL_FAULT\Faults.sql                                                            [Started]
+2015-05-25 08:56:01  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_DIR_SRVY_STATION\\DSS_SurveyStations.sql']
+2015-05-25 08:56:01  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_DIR_SRVY_STATION\\SurveyStations.sql']
+2015-05-25 08:56:01  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_DIR_SRVY_STATION\\WellSurveys.sql']
+2015-05-25 08:56:01  WELL_TEST\DSTChamberTest.sql                                                     [Started]
+2015-05-25 08:56:01  WELL_TEST\DSTFluidPropertiesTest.sql                                             [Started]
+2015-05-25 08:56:01  WELL_TEST\DSTHeader.sql                                                          [Started]
+2015-05-25 08:56:01  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_FAULT\\Faults.sql']
+2015-05-25 08:56:01  WELL_TEST\DSTPipesTest.sql                                                       [Started]
+2015-05-25 08:56:01  WELL_TEST\DSTPressureTest.sql                                                    [Started]
+2015-05-25 08:56:02  WELL_TEST\DSTsTest.sql                                                           [Started]
+2015-05-25 08:56:02  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_DIR_SRVY\\WellDataPresent.sql']
+2015-05-25 08:56:02  WELL_TEST\DSTSurfacesTest.sql                                                    [Started]
+2015-05-25 08:56:02  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST\\DSTFluidPropertiesTest.sql']
+2015-05-25 08:56:02  WELL_TEST\InitialPotentials.sql                                                  [Started]
+2015-05-25 08:56:02  WELL_TEST_ANALYSIS\DistinctFluidType.sql                                         [Started]
+2015-05-25 08:56:02  WELL_TEST_ANALYSIS\DSTFluidProperties.sql                                        [Started]
+2015-05-25 08:56:02  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST\\DSTChamberTest.sql']
+2015-05-25 08:56:02  WELL_TEST_ANALYSIS\DSTFluidPropertiesTest.sql                                    [Started]
+2015-05-25 08:56:02  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST\\DSTsTest.sql']
+2015-05-25 08:56:02  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST\\DSTHeader.sql']
+2015-05-25 08:56:02  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST_ANALYSIS\\DistinctFluidType.sql']
+2015-05-25 08:56:02  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST\\DSTPressureTest.sql']
+2015-05-25 08:56:02  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST_ANALYSIS\\DSTFluidProperties.sql']
+2015-05-25 08:56:02  WELL_TEST_FLOW\DSTSurfaces.sql                                                   [Started]
+2015-05-25 08:56:02  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST\\DSTPipesTest.sql']
+2015-05-25 08:56:02  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST\\DSTSurfacesTest.sql']
+2015-05-25 08:56:02  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST\\InitialPotentials.sql']
+2015-05-25 08:56:02  WELL_TEST_FLOW\DSTSurfacesTest.sql                                               [Started]
+2015-05-25 08:56:02  WELL_TEST_FORMATION\DistinctTestedFormations.sql                                 [Started]
+2015-05-25 08:56:02  WELL_TEST_FORMATION\DSTChamberTest.sql                                           [Started]
+2015-05-25 08:56:02  WELL_TEST_FORMATION\DSTFluidPropertiesTest.sql                                   [Started]
+2015-05-25 08:56:02  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST_FLOW\\DSTSurfaces.sql']
+2015-05-25 08:56:02  WELL_TEST_FORMATION\DSTHeader.sql                                                [Started]
+2015-05-25 08:56:02  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_DIR_SRVY_STATION\\WellDataPresent.sql']
+2015-05-25 08:56:02  WELL_TEST_FORMATION\DSTPipesTest.sql                                             [Started]
+2015-05-25 08:56:02  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST_FORMATION\\DistinctTestedFormations.sql']
+2015-05-25 08:56:02  WELL_TEST_FORMATION\DSTPressureTest.sql                                          [Started]
+2015-05-25 08:56:02  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST_ANALYSIS\\DSTFluidPropertiesTest.sql']
+2015-05-25 08:56:02  WELL_TEST_FORMATION\DSTSurfacesTest.sql                                          [Started]
+2015-05-25 08:56:02  WELL_TEST_FORMATION\WellTestFormations.sql                                       [Started]
+2015-05-25 08:56:02  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST_FLOW\\DSTSurfacesTest.sql']
+2015-05-25 08:56:02  WELL_TEST_MUD\DSTMud.sql                                                         [Started]
+2015-05-25 08:56:02  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST_FORMATION\\DSTChamberTest.sql']
+2015-05-25 08:56:02  WELL_TEST_PRESSURE\DSTPressures.sql                                              [Started]
+2015-05-25 08:56:03  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST_FORMATION\\DSTFluidPropertiesTest.sql']
+2015-05-25 08:56:03  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST_FORMATION\\DSTHeader.sql']
+2015-05-25 08:56:02  WELL_TEST_PRESSURE\DSTPressureTest.sql                                           [Started]
+2015-05-25 08:56:03  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST_FORMATION\\DSTPressureTest.sql']
+2015-05-25 08:56:03  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST_FORMATION\\WellTestFormations.sql']
+2015-05-25 08:56:03  WELL_TEST_RECOVERY\DSTChamber.sql                                                [Started]
+2015-05-25 08:56:03  WELL_TEST_RECOVERY\DSTChamberTest.sql                                            [Started]
+2015-05-25 08:56:03  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST_FORMATION\\DSTPipesTest.sql']
+2015-05-25 08:56:03  WELL_TEST_RECOVERY\DSTPipes.sql                                                  [Started]
+2015-05-25 08:56:03  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST_PRESSURE\\DSTPressures.sql']
+2015-05-25 08:56:03  WELL_TEST_RECOVERY\DSTPipesTest.sql                                              [Started]
+2015-05-25 08:56:03  WELL_TREATMENT\WellDataPresent.sql                                               [Started]
+2015-05-25 08:56:03  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST_FORMATION\\DSTSurfacesTest.sql']
+2015-05-25 08:56:03  WELL_TREATMENT\WellTreatment.sql                                                 [Started]
+2015-05-25 08:56:03  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST_MUD\\DSTMud.sql']
+2015-05-25 08:56:03  WELL_ZONE_INTERVAL\WellZoneAttributeValues.sql                                   [Started]
+2015-05-25 08:56:03  WELL_ZONE_INTERVAL\WellZoneInterval.sql                                          [Started]
+2015-05-25 08:56:03  WELL_ZONE_INTERVAL\WellZoneIntrvValueWithDepthsOuterJoin2.sql                    [Started]
+2015-05-25 08:56:03  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST_PRESSURE\\DSTPressureTest.sql']
+2015-05-25 08:56:03  WELL_ZONE_INTRVL_VALUE\WellZoneIntrvlValue.sql                                   [Started]
+2015-05-25 08:56:03  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST_RECOVERY\\DSTChamber.sql']
+2015-05-25 08:56:03  WELL_ZONE_INTRVL_VALUE\WellZoneIntrvValueWithDepthsOuterJoin2.sql                [Started]
+2015-05-25 08:56:03  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST_RECOVERY\\DSTChamberTest.sql']
+2015-05-25 08:56:03  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST_RECOVERY\\DSTPipes.sql']
+2015-05-25 08:56:03  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_ZONE_INTERVAL\\WellZoneAttributeValues.sql']
+2015-05-25 08:56:03  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_ZONE_INTERVAL\\WellZoneIntrvValueWithDepthsOuterJoin2.sql']
+2015-05-25 08:56:03  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TEST_RECOVERY\\DSTPipesTest.sql']
+2015-05-25 08:56:03  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TREATMENT\\WellTreatment.sql']
+2015-05-25 08:56:03  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_ZONE_INTERVAL\\WellZoneInterval.sql']
+2015-05-25 08:56:03  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_ZONE_INTRVL_VALUE\\WellZoneIntrvlValue.sql']
+2015-05-25 08:56:03  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_ZONE_INTRVL_VALUE\\WellZoneIntrvValueWithDepthsOuterJoin2.sql']
+2015-05-25 08:56:04  command => ['C:\\Program Files (x86)\\GeoGraphix\\SQL Anywhere 12\\BIN32\\dbisql.com', '-q', '-c', 'UID=dba;PWD=sql;DBF=D:\\GXDBProjects\\Eagle Ford\\GXDB.db', 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Results\\WELL_TREATMENT\\WellDataPresent.sql']
+2015-05-25 08:56:13  FORMATION\FormationLookup.sql                                                    [Finished]
+2015-05-25 08:56:28  GX_PDEN_VOL_SUM_BY_MONTH\AllocatedMonthlyProductionTest.sql                      [Finished]
+2015-05-25 08:56:32  FORMATION\DistinctFormationAli.sql                                               [Finished]
+2015-05-25 08:56:33  GX_WELL_SYNTHETIC\WellSynthetic.sql                                              [Finished]
+2015-05-25 08:56:33  GGX_MICROSEISMIC_MSEVENT\MicroseismicEvents.sql                                  [Finished]
+2015-05-25 08:56:33  GGX_MICROSEISMIC_PRESSURE\MicroseismicPressures.sql                              [Finished]
+2015-05-25 08:56:34  FORMATION\DistinctFormations.sql                                                 [Finished]
+2015-05-25 08:56:34  FORMATION\DistinctFormationsWithActive.sql                                       [Finished]
+2015-05-25 08:56:34  GX_WELL_SYNTHETIC\VelocitySurveysWithSynthetics.sql                              [Finished]
+2015-05-25 08:56:35  GX_PDEN_VOL_SUM_BY_MONTH\WellMonthlyYTDProduction.sql                            [Finished]
+2015-05-25 08:56:35  GX_ZATTRIBUTE\GXZAttribute.sql                                                   [Finished]
+2015-05-25 08:56:36  GX_PDEN_VOL_SUM_BY_MONTH\WellProduction.sql                                      [Finished]
+2015-05-25 08:56:36  FORMATION\FormationSources.sql                                                   [Finished]
+2015-05-25 08:56:37  GX_ZONE\GXZone.sql                                                               [Finished]
+2015-05-25 08:56:37  GX_PDEN_VOL_SUM_BY_MONTH\WellMonthlyProductionByZoneAli.sql                      [Finished]
+2015-05-25 08:56:37  GX_PDEN_VOL_SUM_BY_MONTH\AllocatedMonthlyProduction.sql                          [Finished]
+2015-05-25 08:56:38  R_SOURCE\DistinctSources.sql                                                     [Finished]
+2015-05-25 08:56:38  GX_ZONE_ZATTRIBUTE\GXZoneZAttribute.sql                                          [Finished]
+2015-05-25 08:56:38  GX_PDEN_VOL_SUM_BY_MONTH\WellMonthlyProduction.sql                               [Finished]
+2015-05-25 08:56:39  R_SOURCE\FaultsSources.sql                                                       [Finished]
+2015-05-25 08:56:39  GX_PDEN_VOL_SUM_BY_MONTH\WellMonthlyCumProduction.sql                            [Finished]
+2015-05-25 08:56:40  R_SOURCE\FormationSources.sql                                                    [Finished]
+2015-05-25 08:56:41  STRATIGRAPHIC_COLUMN\STRATIGRAPHIC_COLUMN.sql                                    [Finished]
+2015-05-25 08:56:48  TUBING\WellTubing.sql                                                            [Finished]
+2015-05-25 08:56:51  GX_PDEN_VOL_SUM_BY_MONTH\WellCumulativeProduction.sql                            [Finished]
+2015-05-25 08:56:58  GX_PRODUCTION_TEST\WellProductionTest.sql                                        [Finished]
+2015-05-25 08:57:04  WELL\LocationGeodatic.sql                                                        [Finished]
+2015-05-25 08:57:05  CASING\WellCasing.sql                                                            [Finished]
+2015-05-25 08:57:07  WELL\WellStatuses.sql                                                            [Finished]
+2015-05-25 08:57:16  WELL\WellSurveyBH.sql                                                            [Finished]
+2015-05-25 08:57:30  WELL\DSS_Well.sql                                                                [Finished]
+2015-05-25 08:57:51  WELL\WellHeader.sql                                                              [Finished]
+2015-05-25 08:57:56  WELL\WellHeaderAndBlob.sql                                                       [Finished]
+2015-05-25 08:58:01  R_SOURCE\FormationsOrderedBySource.sql                                           [Finished]
+2015-05-25 08:58:22  WELL\WellHeaderAndLocation.sql                                                   [Finished]
+2015-05-25 08:58:23  WELL\WellSurveyPicks.sql                                                         [Finished]
+2015-05-25 08:58:28  WELL_CHECKSHOT_DETAIL\WellCheckshotDetail.sql                                    [Finished]
+2015-05-25 08:58:44  WELL_CHECKSHOT_DETAIL\WellVelocities.sql                                         [Finished]
+2015-05-25 08:59:41  WELL_CHECKSHOT_SURVEY\VelocitySurveysWithSynthetics.sql                          [Finished]
+2015-05-25 09:00:31  WELL\WorkoversCAP.sql                                                            [Finished]
+2015-05-25 09:00:50  WELL_CHECKSHOT_SURVEY\WellCheckshotSurvey.sql                                    [Finished]
+2015-05-25 09:01:17  WELL\Workovers.sql                                                               [Finished]
+2015-05-25 09:01:30  WELL_DIR_PROPOSED_SRVY\WellProposedSurveyDir.sql                                 [Finished]
+2015-05-25 09:01:32  WELL_DIR_PROPOSED_SRVY_STATION\ProposedSurveyStations.sql                        [Finished]
+2015-05-25 09:01:33  WELL_CORE_SAMPLE_ANAL\WellCoreAnalysis.sql                                       [Finished]
+2015-05-25 09:01:47  WELL_CORE\WellCoreDesc.sql                                                       [Finished]
+2015-05-25 09:01:56  WELL_DIR_SRVY\DSS_Well.sql                                                       [Finished]
+2015-05-25 09:02:03  WELL_DIR_SRVY\WellSurveyDir.sql                                                  [Finished]
+2015-05-25 09:02:56  WELL_DIR_SRVY\Workovers.sql                                                      [Finished]
+2015-05-25 09:03:03  WELL_DIR_SRVY\Workovers12.sql                                                    [Finished]
+2015-05-25 09:03:06  WELL_DIR_SRVY\WorkoversCAP.sql                                                   [Finished]
+2015-05-25 09:07:11  WELL\WellDataPresent.sql                                                         [Finished]
+2015-05-25 09:11:02  WELL\WellHederWithRemarks.sql                                                    [Finished]
+2015-05-25 09:19:46  WELL_DIR_SRVY_STATION\DSS_SurveyStations.sql                                     [Finished]
+2015-05-25 09:21:56  WELL_FAULT\Faults.sql                                                            [Finished]
+2015-05-25 09:22:45  WELL_DIR_SRVY_STATION\SurveyStations.sql                                         [Finished]
+2015-05-25 09:24:00  WELL_DIR_SRVY\WellDataPresent.sql                                                [Finished]
+2015-05-25 09:24:56  WELL_TEST\DSTFluidPropertiesTest.sql                                             [Finished]
+2015-05-25 09:25:47  WELL_TEST\DSTChamberTest.sql                                                     [Finished]
+2015-05-25 09:26:11  WELL_TEST\DSTsTest.sql                                                           [Finished]
+2015-05-25 09:26:12  WELL_TEST\DSTHeader.sql                                                          [Finished]
+2015-05-25 09:26:16  WELL_TEST_ANALYSIS\DistinctFluidType.sql                                         [Finished]
+2015-05-25 09:26:28  WELL_TEST_ANALYSIS\DSTFluidProperties.sql                                        [Finished]
+2015-05-25 09:26:50  WELL_TEST\DSTPipesTest.sql                                                       [Finished]
+2015-05-25 09:26:52  WELL_TEST\DSTPressureTest.sql                                                    [Finished]
+2015-05-25 09:27:02  WELL_TEST\DSTSurfacesTest.sql                                                    [Finished]
+2015-05-25 09:27:10  WELL_TEST_FLOW\DSTSurfaces.sql                                                   [Finished]
+2015-05-25 09:27:20  WELL_DIR_SRVY_STATION\WellDataPresent.sql                                        [Finished]
+2015-05-25 09:27:22  WELL_TEST_FORMATION\DistinctTestedFormations.sql                                 [Finished]
+2015-05-25 09:27:49  WELL_TEST_ANALYSIS\DSTFluidPropertiesTest.sql                                    [Finished]
+2015-05-25 09:27:54  WELL_TEST_FLOW\DSTSurfacesTest.sql                                               [Finished]
+2015-05-25 09:27:56  WELL_TEST_FORMATION\DSTChamberTest.sql                                           [Finished]
+2015-05-25 09:28:19  WELL_TEST_FORMATION\DSTFluidPropertiesTest.sql                                   [Finished]
+2015-05-25 09:28:44  WELL_TEST_FORMATION\DSTHeader.sql                                                [Finished]
+2015-05-25 09:29:31  WELL_TEST_FORMATION\DSTPressureTest.sql                                          [Finished]
+2015-05-25 09:29:32  WELL_TEST_FORMATION\WellTestFormations.sql                                       [Finished]
+2015-05-25 09:29:49  WELL_DIR_SRVY\WellSurveys.sql                                                    [Finished]
+2015-05-25 09:29:51  WELL_TEST_FORMATION\DSTPipesTest.sql                                             [Finished]
+2015-05-25 09:29:56  WELL_TEST_FORMATION\DSTSurfacesTest.sql                                          [Finished]
+2015-05-25 09:29:57  WELL_TEST_MUD\DSTMud.sql                                                         [Finished]
+2015-05-25 09:30:00  WELL_DIR_SRVY_STATION\WellSurveys.sql                                            [Finished]
+2015-05-25 09:30:02  WELL_TEST_RECOVERY\DSTChamber.sql                                                [Finished]
+2015-05-25 09:30:04  WELL_TEST_RECOVERY\DSTChamberTest.sql                                            [Finished]
+2015-05-25 09:30:17  WELL_TEST_PRESSURE\DSTPressures.sql                                              [Finished]
+2015-05-25 09:30:20  WELL_TEST_RECOVERY\DSTPipes.sql                                                  [Finished]
+2015-05-25 09:30:58  WELL_TEST_PRESSURE\DSTPressureTest.sql                                           [Finished]
+2015-05-25 09:31:35  WELL_TEST_RECOVERY\DSTPipesTest.sql                                              [Finished]
+2015-05-25 09:31:37  WELL_TREATMENT\WellTreatment.sql                                                 [Finished]
+2015-05-25 09:33:19  WELL_TEST\InitialPotentials.sql                                                  [Finished]
+2015-05-25 09:37:19  WELL\WellZoneAttributeValues.sql                                                 [Finished]
+2015-05-25 09:40:14  FORMATION\OrderedFormations.sql                                                  [Finished]
+2015-05-25 09:42:21  WELL_TREATMENT\WellDataPresent.sql                                               [Finished]
+2015-05-25 09:42:21  WELL_ZONE_INTRVL_VALUE\WellZoneIntrvlValue.sql                                   [Finished]
+2015-05-25 09:42:40  WELL_ZONE_INTERVAL\WellZoneInterval.sql                                          [Finished]
+2015-05-25 09:43:13  GX_ZONE\WellZoneIntrvValueWithDepthsOuterJoin2.sql                               [Finished]
+2015-05-25 09:47:57  GX_ZONE\WellZoneAttributeValues.sql                                              [Finished]
+2015-05-25 09:48:04  WELL\WellZoneIntrvValueWithDepthsOuterJoin2.sql                                  [Finished]
+2015-05-25 09:54:20  WELL_ZONE_INTERVAL\WellZoneAttributeValues.sql                                   [Finished]
+2015-05-25 09:54:22  WELL_ZONE_INTERVAL\WellZoneIntrvValueWithDepthsOuterJoin2.sql                    [Finished]
+2015-05-25 09:54:39  WELL_ZONE_INTRVL_VALUE\WellZoneIntrvValueWithDepthsOuterJoin2.sql                [Finished]
+2015-05-25 09:54:40  ====================================================================================================
+2015-05-25 09:54:40  Results
+2015-05-25 09:54:40  ====================================================================================================
+2015-05-25 09:54:40  Comparing => FORMATION\FormationLookup.sql_1.xml
+2015-05-25 09:54:40  Comparing => GX_PDEN_VOL_SUM_BY_MONTH\AllocatedMonthlyProductionTest.sql_1.xml
+2015-05-25 09:54:40  Comparing => GX_WELL_SYNTHETIC\WellSynthetic.sql_1.xml
+2015-05-25 09:54:40  Comparing => GGX_MICROSEISMIC_MSEVENT\MicroseismicEvents.sql_1.xml
+2015-05-25 09:54:40  Comparing => GGX_MICROSEISMIC_PRESSURE\MicroseismicPressures.sql_1.xml
+2015-05-25 09:54:40  Comparing => FORMATION\DistinctFormations.sql_1.xml
+2015-05-25 09:54:40  Comparing => FORMATION\DistinctFormationsWithActive.sql_1.xml
+2015-05-25 09:54:40  Comparing => GX_WELL_SYNTHETIC\VelocitySurveysWithSynthetics.sql_1.xml
+2015-05-25 09:54:40  Comparing => GX_PDEN_VOL_SUM_BY_MONTH\WellMonthlyYTDProduction.sql_1.xml
+2015-05-25 09:54:40  Comparing => GX_ZATTRIBUTE\GXZAttribute.sql_1.xml
+2015-05-25 09:54:40  Comparing => GX_PDEN_VOL_SUM_BY_MONTH\WellProduction.sql_1.xml
+2015-05-25 09:54:40  Comparing => FORMATION\FormationSources.sql_1.xml
+2015-05-25 09:54:40  Comparing => GX_ZONE\GXZone.sql_1.xml
+2015-05-25 09:54:40  Comparing => GX_PDEN_VOL_SUM_BY_MONTH\WellMonthlyProductionByZoneAli.sql_1.xml
+2015-05-25 09:54:40  Comparing => GX_PDEN_VOL_SUM_BY_MONTH\AllocatedMonthlyProduction.sql_1.xml
+2015-05-25 09:54:40  Comparing => R_SOURCE\DistinctSources.sql_1.xml
+2015-05-25 09:54:40  Comparing => GX_ZONE_ZATTRIBUTE\GXZoneZAttribute.sql_1.xml
+2015-05-25 09:54:40  Comparing => GX_PDEN_VOL_SUM_BY_MONTH\WellMonthlyProduction.sql_1.xml
+2015-05-25 09:54:40  Comparing => R_SOURCE\FaultsSources.sql_1.xml
+2015-05-25 09:54:40  Comparing => GX_PDEN_VOL_SUM_BY_MONTH\WellMonthlyCumProduction.sql_1.xml
+2015-05-25 09:54:40  Comparing => R_SOURCE\FormationSources.sql_1.xml
+2015-05-25 09:54:40  Comparing => STRATIGRAPHIC_COLUMN\STRATIGRAPHIC_COLUMN.sql_1.xml
+2015-05-25 09:54:40  Comparing => TUBING\WellTubing.sql_1.xml
+2015-05-25 09:54:40  Comparing => GX_PDEN_VOL_SUM_BY_MONTH\WellCumulativeProduction.sql_1.xml
+2015-05-25 09:54:40  Comparing => GX_PRODUCTION_TEST\WellProductionTest.sql_1.xml
+2015-05-25 09:54:40  Comparing => WELL\LocationGeodatic.sql_1.xml
+2015-05-25 09:54:40  Comparing => CASING\WellCasing.sql_1.xml
+2015-05-25 09:54:40  Comparing => WELL\WellStatuses.sql_1.xml
+2015-05-25 09:54:40  Comparing => WELL\WellSurveyBH.sql_1.xml
+2015-05-25 09:54:40  Comparing => WELL\DSS_Well.sql_1.xml
+2015-05-25 09:54:40  Comparing => WELL\WellHeader.sql_1.xml
+2015-05-25 09:54:40  Comparing => WELL\WellHeaderAndBlob.sql_1.xml
+2015-05-25 09:54:40  Comparing => R_SOURCE\FormationsOrderedBySource.sql_1.xml
+2015-05-25 09:54:40  Comparing => WELL\WellHeaderAndLocation.sql_1.xml
+2015-05-25 09:54:40  Comparing => WELL\WellSurveyPicks.sql_1.xml
+2015-05-25 09:54:40  Comparing => WELL_CHECKSHOT_DETAIL\WellCheckshotDetail.sql_1.xml
+2015-05-25 09:54:40  Comparing => WELL_CHECKSHOT_DETAIL\WellVelocities.sql_1.xml
+2015-05-25 09:54:40  Comparing => WELL_CHECKSHOT_SURVEY\VelocitySurveysWithSynthetics.sql_1.xml
+2015-05-25 09:54:40  Comparing => WELL\WorkoversCAP.sql_1.xml
+2015-05-25 09:54:40  Comparing => WELL_CHECKSHOT_SURVEY\WellCheckshotSurvey.sql_1.xml
+2015-05-25 09:54:40  Comparing => WELL\Workovers.sql_1.xml
+2015-05-25 09:54:40  Comparing => WELL_DIR_PROPOSED_SRVY\WellProposedSurveyDir.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_DIR_PROPOSED_SRVY_STATION\ProposedSurveyStations.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_CORE_SAMPLE_ANAL\WellCoreAnalysis.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_CORE\WellCoreDesc.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_DIR_SRVY\DSS_Well.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_DIR_SRVY\WellSurveyDir.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_DIR_SRVY\Workovers.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_DIR_SRVY\Workovers12.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_DIR_SRVY\WorkoversCAP.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL\WellDataPresent.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL\WellHederWithRemarks.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_DIR_SRVY_STATION\DSS_SurveyStations.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_FAULT\Faults.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_DIR_SRVY_STATION\SurveyStations.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_DIR_SRVY\WellDataPresent.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST\DSTFluidPropertiesTest.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST\DSTChamberTest.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST\DSTsTest.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST\DSTHeader.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST_ANALYSIS\DistinctFluidType.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST_ANALYSIS\DSTFluidProperties.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST\DSTPipesTest.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST\DSTPressureTest.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST\DSTSurfacesTest.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST_FLOW\DSTSurfaces.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_DIR_SRVY_STATION\WellDataPresent.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST_FORMATION\DistinctTestedFormations.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST_ANALYSIS\DSTFluidPropertiesTest.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST_FLOW\DSTSurfacesTest.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST_FORMATION\DSTChamberTest.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST_FORMATION\DSTFluidPropertiesTest.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST_FORMATION\DSTHeader.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST_FORMATION\DSTPressureTest.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST_FORMATION\WellTestFormations.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_DIR_SRVY\WellSurveys.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST_FORMATION\DSTPipesTest.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST_FORMATION\DSTSurfacesTest.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST_MUD\DSTMud.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_DIR_SRVY_STATION\WellSurveys.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST_RECOVERY\DSTChamber.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST_RECOVERY\DSTChamberTest.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST_PRESSURE\DSTPressures.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST_RECOVERY\DSTPipes.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST_PRESSURE\DSTPressureTest.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST_RECOVERY\DSTPipesTest.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TREATMENT\WellTreatment.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TEST\InitialPotentials.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL\WellZoneAttributeValues.sql_1.xml
+2015-05-25 09:54:41  Comparing => FORMATION\OrderedFormations.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_TREATMENT\WellDataPresent.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_ZONE_INTRVL_VALUE\WellZoneIntrvlValue.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_ZONE_INTERVAL\WellZoneInterval.sql_1.xml
+2015-05-25 09:54:41  Comparing => GX_ZONE\WellZoneIntrvValueWithDepthsOuterJoin2.sql_1.xml
+2015-05-25 09:54:41  Comparing => GX_ZONE\WellZoneAttributeValues.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL\WellZoneIntrvValueWithDepthsOuterJoin2.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_ZONE_INTERVAL\WellZoneAttributeValues.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_ZONE_INTERVAL\WellZoneIntrvValueWithDepthsOuterJoin2.sql_1.xml
+2015-05-25 09:54:41  Comparing => WELL_ZONE_INTRVL_VALUE\WellZoneIntrvValueWithDepthsOuterJoin2.sql_1.xml
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\GX_PDEN_VOL_SUM_BY_MONTH\\AllocatedMonthlyProductionTest.sql_1.xml'
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\FORMATION\\DistinctFormationsWithActive.sql_1.xml'
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\GX_PDEN_VOL_SUM_BY_MONTH\\WellMonthlyYTDProduction.sql_1.xml'
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\FORMATION\\DistinctFormations.sql_1.xml'
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\GX_WELL_SYNTHETIC\\WellSynthetic.sql_1.xml'
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\GGX_MICROSEISMIC_MSEVENT\\MicroseismicEvents.sql_1.xml'
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\GGX_MICROSEISMIC_PRESSURE\\MicroseismicPressures.sql_1.xml'
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\GX_WELL_SYNTHETIC\\VelocitySurveysWithSynthetics.sql_1.xml'
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\FORMATION\\FormationLookup.sql_1.xml'
+2015-05-25 09:54:41  GX_PDEN_VOL_SUM_BY_MONTH\AllocatedMonthlyProductionTest.sql_1.xml                [Fail]
+2015-05-25 09:54:41  FORMATION\DistinctFormationsWithActive.sql_1.xml                                 [Fail]
+2015-05-25 09:54:41  GX_PDEN_VOL_SUM_BY_MONTH\WellMonthlyYTDProduction.sql_1.xml                      [Fail]
+2015-05-25 09:54:41  FORMATION\DistinctFormations.sql_1.xml                                           [Fail]
+2015-05-25 09:54:41  GX_WELL_SYNTHETIC\WellSynthetic.sql_1.xml                                        [Fail]
+2015-05-25 09:54:41  GGX_MICROSEISMIC_PRESSURE\MicroseismicPressures.sql_1.xml                        [Fail]
+2015-05-25 09:54:41  GGX_MICROSEISMIC_MSEVENT\MicroseismicEvents.sql_1.xml                            [Fail]
+2015-05-25 09:54:41  GX_WELL_SYNTHETIC\VelocitySurveysWithSynthetics.sql_1.xml                        [Fail]
+2015-05-25 09:54:41  FORMATION\FormationLookup.sql_1.xml                                              [Fail]
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\GX_PDEN_VOL_SUM_BY_MONTH\\WellProduction.sql_1.xml'
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\FORMATION\\FormationSources.sql_1.xml'
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\GX_ZONE_ZATTRIBUTE\\GXZoneZAttribute.sql_1.xml'
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\GX_PDEN_VOL_SUM_BY_MONTH\\WellMonthlyProduction.sql_1.xml'
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\GX_PDEN_VOL_SUM_BY_MONTH\\AllocatedMonthlyProduction.sql_1.xml'
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\GX_PDEN_VOL_SUM_BY_MONTH\\WellMonthlyProductionByZoneAli.sql_1.xml'
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\GX_ZATTRIBUTE\\GXZAttribute.sql_1.xml'
+2015-05-25 09:54:41  GX_ZONE_ZATTRIBUTE\GXZoneZAttribute.sql_1.xml                                    [Fail]
+2015-05-25 09:54:41  GX_PDEN_VOL_SUM_BY_MONTH\AllocatedMonthlyProduction.sql_1.xml                    [Fail]
+2015-05-25 09:54:41  GX_PDEN_VOL_SUM_BY_MONTH\WellMonthlyProductionByZoneAli.sql_1.xml                [Fail]
+2015-05-25 09:54:41  GX_ZATTRIBUTE\GXZAttribute.sql_1.xml                                             [Fail]
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\GX_PDEN_VOL_SUM_BY_MONTH\\WellMonthlyCumProduction.sql_1.xml'
+2015-05-25 09:54:41  GX_PDEN_VOL_SUM_BY_MONTH\WellMonthlyCumProduction.sql_1.xml                      [Fail]
+2015-05-25 09:54:41  GX_PDEN_VOL_SUM_BY_MONTH\WellProduction.sql_1.xml                                [Fail]
+2015-05-25 09:54:41  GX_PDEN_VOL_SUM_BY_MONTH\WellMonthlyProduction.sql_1.xml                         [Fail]
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\GX_PDEN_VOL_SUM_BY_MONTH\\WellCumulativeProduction.sql_1.xml'
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\GX_ZONE\\GXZone.sql_1.xml'
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\STRATIGRAPHIC_COLUMN\\STRATIGRAPHIC_COLUMN.sql_1.xml'
+2015-05-25 09:54:41  STRATIGRAPHIC_COLUMN\STRATIGRAPHIC_COLUMN.sql_1.xml                              [Fail]
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\R_SOURCE\\DistinctSources.sql_1.xml'
+2015-05-25 09:54:41  R_SOURCE\DistinctSources.sql_1.xml                                               [Fail]
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\R_SOURCE\\FaultsSources.sql_1.xml'
+2015-05-25 09:54:41  R_SOURCE\FaultsSources.sql_1.xml                                                 [Fail]
+2015-05-25 09:54:41  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\R_SOURCE\\FormationSources.sql_1.xml'
+2015-05-25 09:54:41  R_SOURCE\FormationSources.sql_1.xml                                              [Fail]
+2015-05-25 09:54:41  FORMATION\FormationSources.sql_1.xml                                             [Fail]
+2015-05-25 09:54:41  GX_ZONE\GXZone.sql_1.xml                                                         [Fail]
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\CASING\\WellCasing.sql_1.xml'
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL\\WellStatuses.sql_1.xml'
+2015-05-25 09:54:42  WELL\WellStatuses.sql_1.xml                                                      [Fail]
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\GX_PRODUCTION_TEST\\WellProductionTest.sql_1.xml'
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\TUBING\\WellTubing.sql_1.xml'
+2015-05-25 09:54:42  TUBING\WellTubing.sql_1.xml                                                      [Fail]
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL\\DSS_Well.sql_1.xml'
+2015-05-25 09:54:42  WELL\DSS_Well.sql_1.xml                                                          [Fail]
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL\\LocationGeodatic.sql_1.xml'
+2015-05-25 09:54:42  WELL\LocationGeodatic.sql_1.xml                                                  [Fail]
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL\\WellSurveyBH.sql_1.xml'
+2015-05-25 09:54:42  WELL\WellSurveyBH.sql_1.xml                                                      [Fail]
+2015-05-25 09:54:42  GX_PDEN_VOL_SUM_BY_MONTH\WellCumulativeProduction.sql_1.xml                      [Fail]
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL\\WellHeader.sql_1.xml'
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_CHECKSHOT_DETAIL\\WellVelocities.sql_1.xml'
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_CHECKSHOT_DETAIL\\WellCheckshotDetail.sql_1.xml'
+2015-05-25 09:54:42  WELL_CHECKSHOT_DETAIL\WellVelocities.sql_1.xml                                   [Fail]
+2015-05-25 09:54:42  WELL_CHECKSHOT_DETAIL\WellCheckshotDetail.sql_1.xml                              [Fail]
+2015-05-25 09:54:42  CASING\WellCasing.sql_1.xml                                                      [Fail]
+2015-05-25 09:54:42  GX_PRODUCTION_TEST\WellProductionTest.sql_1.xml                                  [Fail]
+2015-05-25 09:54:42  WELL\WellHeader.sql_1.xml                                                        [Fail]
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_DIR_PROPOSED_SRVY\\WellProposedSurveyDir.sql_1.xml'
+2015-05-25 09:54:42  WELL_DIR_PROPOSED_SRVY\WellProposedSurveyDir.sql_1.xml                           [Fail]
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_DIR_PROPOSED_SRVY_STATION\\ProposedSurveyStations.sql_1.xml'
+2015-05-25 09:54:42  WELL_DIR_PROPOSED_SRVY_STATION\ProposedSurveyStations.sql_1.xml                  [Fail]
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL\\WellSurveyPicks.sql_1.xml'
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL\\WorkoversCAP.sql_1.xml'
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL\\WellHeaderAndLocation.sql_1.xml'
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_CHECKSHOT_SURVEY\\WellCheckshotSurvey.sql_1.xml'
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_CHECKSHOT_SURVEY\\VelocitySurveysWithSynthetics.sql_1.xml'
+2015-05-25 09:54:42  WELL_CHECKSHOT_SURVEY\WellCheckshotSurvey.sql_1.xml                              [Fail]
+2015-05-25 09:54:42  WELL_CHECKSHOT_SURVEY\VelocitySurveysWithSynthetics.sql_1.xml                    [Fail]
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL\\WellHeaderAndBlob.sql_1.xml'
+2015-05-25 09:54:42  WELL\WellHeaderAndBlob.sql_1.xml                                                 [Fail]
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_CORE\\WellCoreDesc.sql_1.xml'
+2015-05-25 09:54:42  WELL_CORE\WellCoreDesc.sql_1.xml                                                 [Fail]
+2015-05-25 09:54:42  WELL\WellSurveyPicks.sql_1.xml                                                   [Fail]
+2015-05-25 09:54:42  WELL\WorkoversCAP.sql_1.xml                                                      [Fail]
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\R_SOURCE\\FormationsOrderedBySource.sql_1.xml'
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL\\Workovers.sql_1.xml'
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_CORE_SAMPLE_ANAL\\WellCoreAnalysis.sql_1.xml'
+2015-05-25 09:54:42  WELL_CORE_SAMPLE_ANAL\WellCoreAnalysis.sql_1.xml                                 [Fail]
+2015-05-25 09:54:42  WELL\WellHeaderAndLocation.sql_1.xml                                             [Fail]
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL\\WellDataPresent.sql_1.xml'
+2015-05-25 09:54:42  R_SOURCE\FormationsOrderedBySource.sql_1.xml                                     [Fail]
+2015-05-25 09:54:42  WELL\Workovers.sql_1.xml                                                         [Fail]
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_DIR_SRVY\\WellSurveyDir.sql_1.xml'
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_DIR_SRVY\\DSS_Well.sql_1.xml'
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_DIR_SRVY\\WorkoversCAP.sql_1.xml'
+2015-05-25 09:54:42  WELL_DIR_SRVY\WorkoversCAP.sql_1.xml                                             [Fail]
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_DIR_SRVY\\Workovers.sql_1.xml'
+2015-05-25 09:54:42  WELL_DIR_SRVY\Workovers.sql_1.xml                                                [Fail]
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_DIR_SRVY\\Workovers12.sql_1.xml'
+2015-05-25 09:54:42  WELL_DIR_SRVY\Workovers12.sql_1.xml                                              [Fail]
+2015-05-25 09:54:42  WELL\WellDataPresent.sql_1.xml                                                   [Fail]
+2015-05-25 09:54:42  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST\\DSTChamberTest.sql_1.xml'
+2015-05-25 09:54:42  WELL_TEST\DSTChamberTest.sql_1.xml                                               [Fail]
+2015-05-25 09:54:43  WELL_DIR_SRVY\WellSurveyDir.sql_1.xml                                            [Fail]
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_FAULT\\Faults.sql_1.xml'
+2015-05-25 09:54:43  WELL_FAULT\Faults.sql_1.xml                                                      [Fail]
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST\\DSTsTest.sql_1.xml'
+2015-05-25 09:54:43  WELL_DIR_SRVY\DSS_Well.sql_1.xml                                                 [Fail]
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_DIR_SRVY\\WellDataPresent.sql_1.xml'
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST\\DSTFluidPropertiesTest.sql_1.xml'
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST_ANALYSIS\\DistinctFluidType.sql_1.xml'
+2015-05-25 09:54:43  WELL_TEST_ANALYSIS\DistinctFluidType.sql_1.xml                                   [Fail]
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST\\DSTHeader.sql_1.xml'
+2015-05-25 09:54:43  WELL_TEST\DSTsTest.sql_1.xml                                                     [Fail]
+2015-05-25 09:54:43  WELL_DIR_SRVY\WellDataPresent.sql_1.xml                                          [Fail]
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST_ANALYSIS\\DSTFluidProperties.sql_1.xml'
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST\\DSTPipesTest.sql_1.xml'
+2015-05-25 09:54:43  WELL_TEST\DSTPipesTest.sql_1.xml                                                 [Fail]
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST\\DSTPressureTest.sql_1.xml'
+2015-05-25 09:54:43  WELL_TEST\DSTPressureTest.sql_1.xml                                              [Fail]
+2015-05-25 09:54:43  WELL_TEST\DSTHeader.sql_1.xml                                                    [Fail]
+2015-05-25 09:54:43  WELL_TEST\DSTFluidPropertiesTest.sql_1.xml                                       [Fail]
+2015-05-25 09:54:43  WELL_TEST_ANALYSIS\DSTFluidProperties.sql_1.xml                                  [Fail]
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST\\DSTSurfacesTest.sql_1.xml'
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST_FLOW\\DSTSurfaces.sql_1.xml'
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST_FLOW\\DSTSurfacesTest.sql_1.xml'
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST_ANALYSIS\\DSTFluidPropertiesTest.sql_1.xml'
+2015-05-25 09:54:43  WELL_TEST_ANALYSIS\DSTFluidPropertiesTest.sql_1.xml                              [Fail]
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST_FORMATION\\DistinctTestedFormations.sql_1.xml'
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST_FORMATION\\DSTChamberTest.sql_1.xml'
+2015-05-25 09:54:43  WELL_TEST_FORMATION\DistinctTestedFormations.sql_1.xml                           [Fail]
+2015-05-25 09:54:43  WELL_TEST_FORMATION\DSTChamberTest.sql_1.xml                                     [Fail]
+2015-05-25 09:54:43  WELL_TEST\DSTSurfacesTest.sql_1.xml                                              [Fail]
+2015-05-25 09:54:43  WELL_TEST_FLOW\DSTSurfaces.sql_1.xml                                             [Fail]
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST_FORMATION\\DSTFluidPropertiesTest.sql_1.xml'
+2015-05-25 09:54:43  WELL_TEST_FLOW\DSTSurfacesTest.sql_1.xml                                         [Fail]
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST_FORMATION\\DSTHeader.sql_1.xml'
+2015-05-25 09:54:43  WELL_TEST_FORMATION\DSTHeader.sql_1.xml                                          [Fail]
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST_FORMATION\\DSTPressureTest.sql_1.xml'
+2015-05-25 09:54:43  WELL_TEST_FORMATION\DSTPressureTest.sql_1.xml                                    [Fail]
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST_FORMATION\\WellTestFormations.sql_1.xml'
+2015-05-25 09:54:43  WELL_TEST_FORMATION\WellTestFormations.sql_1.xml                                 [Fail]
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST_MUD\\DSTMud.sql_1.xml'
+2015-05-25 09:54:43  WELL_TEST_MUD\DSTMud.sql_1.xml                                                   [Fail]
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST_FORMATION\\DSTPipesTest.sql_1.xml'
+2015-05-25 09:54:43  WELL_TEST_FORMATION\DSTFluidPropertiesTest.sql_1.xml                             [Fail]
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST_FORMATION\\DSTSurfacesTest.sql_1.xml'
+2015-05-25 09:54:43  WELL_TEST_FORMATION\DSTSurfacesTest.sql_1.xml                                    [Fail]
+2015-05-25 09:54:43  WELL_TEST_FORMATION\DSTPipesTest.sql_1.xml                                       [Fail]
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST_RECOVERY\\DSTChamber.sql_1.xml'
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST_RECOVERY\\DSTChamberTest.sql_1.xml'
+2015-05-25 09:54:43  WELL_TEST_RECOVERY\DSTChamber.sql_1.xml                                          [Fail]
+2015-05-25 09:54:43  WELL_TEST_RECOVERY\DSTChamberTest.sql_1.xml                                      [Fail]
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST_PRESSURE\\DSTPressureTest.sql_1.xml'
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST_RECOVERY\\DSTPipes.sql_1.xml'
+2015-05-25 09:54:43  WELL_TEST_RECOVERY\DSTPipes.sql_1.xml                                            [Fail]
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST_PRESSURE\\DSTPressures.sql_1.xml'
+2015-05-25 09:54:43  WELL_TEST_PRESSURE\DSTPressures.sql_1.xml                                        [Fail]
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_DIR_SRVY_STATION\\WellDataPresent.sql_1.xml'
+2015-05-25 09:54:43  WELL_DIR_SRVY_STATION\WellDataPresent.sql_1.xml                                  [Fail]
+2015-05-25 09:54:43  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TREATMENT\\WellTreatment.sql_1.xml'
+2015-05-25 09:54:43  WELL_TREATMENT\WellTreatment.sql_1.xml                                           [Fail]
+2015-05-25 09:54:44  WELL_TEST_PRESSURE\DSTPressureTest.sql_1.xml                                     [Fail]
+2015-05-25 09:54:44  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST_RECOVERY\\DSTPipesTest.sql_1.xml'
+2015-05-25 09:54:44  WELL_TEST_RECOVERY\DSTPipesTest.sql_1.xml                                        [Fail]
+2015-05-25 09:54:44  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TREATMENT\\WellDataPresent.sql_1.xml'
+2015-05-25 09:54:44  WELL_TREATMENT\WellDataPresent.sql_1.xml                                         [Fail]
+2015-05-25 09:55:58  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_DIR_SRVY_STATION\\WellSurveys.sql_1.xml'
+2015-05-25 09:55:58  WELL_DIR_SRVY_STATION\WellSurveys.sql_1.xml                                      [Fail]
+2015-05-25 09:55:59  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_DIR_SRVY\\WellSurveys.sql_1.xml'
+2015-05-25 09:55:59  WELL_DIR_SRVY\WellSurveys.sql_1.xml                                              [Fail]
+2015-05-25 09:56:00  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL\\WellHederWithRemarks.sql_1.xml'
+2015-05-25 09:56:00  WELL\WellHederWithRemarks.sql_1.xml                                              [Fail]
+2015-05-25 09:56:00  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\FORMATION\\OrderedFormations.sql_1.xml'
+2015-05-25 09:56:00  FORMATION\OrderedFormations.sql_1.xml                                            [Fail]
+2015-05-25 09:56:00  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_TEST\\InitialPotentials.sql_1.xml'
+2015-05-25 09:56:00  WELL_TEST\InitialPotentials.sql_1.xml                                            [Fail]
+2015-05-25 09:56:01  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_ZONE_INTERVAL\\WellZoneAttributeValues.sql_1.xml'
+2015-05-25 09:56:01  WELL_ZONE_INTERVAL\WellZoneAttributeValues.sql_1.xml                             [Fail]
+2015-05-25 09:56:01  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_ZONE_INTERVAL\\WellZoneIntrvValueWithDepthsOuterJoin2.sql_1.xml'
+2015-05-25 09:56:01  WELL_ZONE_INTERVAL\WellZoneIntrvValueWithDepthsOuterJoin2.sql_1.xml              [Fail]
+2015-05-25 09:56:01  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_ZONE_INTRVL_VALUE\\WellZoneIntrvValueWithDepthsOuterJoin2.sql_1.xml'
+2015-05-25 09:56:01  WELL_ZONE_INTRVL_VALUE\WellZoneIntrvValueWithDepthsOuterJoin2.sql_1.xml          [Fail]
+2015-05-25 09:56:01  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_DIR_SRVY_STATION\\DSS_SurveyStations.sql_1.xml'
+2015-05-25 09:56:01  WELL_DIR_SRVY_STATION\DSS_SurveyStations.sql_1.xml                               [Fail]
+2015-05-25 09:56:05  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL\\WellZoneAttributeValues.sql_1.xml'
+2015-05-25 09:56:05  WELL\WellZoneAttributeValues.sql_1.xml                                           [Fail]
+2015-05-25 09:56:05  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_DIR_SRVY_STATION\\SurveyStations.sql_1.xml'
+2015-05-25 09:56:05  WELL_DIR_SRVY_STATION\SurveyStations.sql_1.xml                                   [Fail]
+2015-05-25 09:56:06  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_ZONE_INTRVL_VALUE\\WellZoneIntrvlValue.sql_1.xml'
+2015-05-25 09:56:06  WELL_ZONE_INTRVL_VALUE\WellZoneIntrvlValue.sql_1.xml                             [Fail]
+2015-05-25 09:56:50  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\GX_ZONE\\WellZoneIntrvValueWithDepthsOuterJoin2.sql_1.xml'
+2015-05-25 09:56:50  GX_ZONE\WellZoneIntrvValueWithDepthsOuterJoin2.sql_1.xml                         [Fail]
+2015-05-25 09:56:56  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL\\WellZoneIntrvValueWithDepthsOuterJoin2.sql_1.xml'
+2015-05-25 09:56:56  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\GX_ZONE\\WellZoneAttributeValues.sql_1.xml'
+2015-05-25 09:56:56  WELL\WellZoneIntrvValueWithDepthsOuterJoin2.sql_1.xml                            [Fail]
+2015-05-25 09:56:56  GX_ZONE\WellZoneAttributeValues.sql_1.xml                                        [Fail]
+2015-05-25 09:56:57  Exception occured in XML compare [Errno 2] No such file or directory: 'D:\\Samples\\GXDBRegression\\GXDBRegression\\EagleFord\\Expected\\WELL_ZONE_INTERVAL\\WellZoneInterval.sql_1.xml'
+2015-05-25 09:56:57  WELL_ZONE_INTERVAL\WellZoneInterval.sql_1.xml                                    [Fail]
+2015-05-25 09:56:57  ====================================================================================================
+2015-05-25 09:56:57  0 passed out of 99
+2015-05-25 09:56:57  Total elapsed time(secs) 3658.68
+2015-05-25 09:56:57  ====================================================================================================
