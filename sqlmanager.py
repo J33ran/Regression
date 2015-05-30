@@ -34,7 +34,8 @@ class SQLManager(object):
         assert(resultfile)
         with open(resultfile, 'w') as fd:
             for sql in sqls:
-                fd.writelines(sql)
+                line = sql + str('\n')
+                fd.write(line)
 
     @classmethod
     def process(cls, sqlfile, resultdir, relpath):
@@ -59,7 +60,7 @@ class SQLManager(object):
                 outrelpath = relpath + outname
 
                 outfile = resultfile + outname
-                out = str("OUTPUT TO ") + str(outfile) + str(" FORMAT XML")
+                out = str("OUTPUT TO ") + str(outfile) + str(" FORMAT XML;")
 
                 outfiles.append(outrelpath)
                 sqls.append(out)
