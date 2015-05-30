@@ -1,2 +1,0 @@
-# Regression
-Python regression scripts
