@@ -77,6 +77,9 @@ class XMLReader(object):
                 True if both files match.
         """
         equal = False
+        rcontext = None
+        lcontext = None
+
         try:
             # get an iterable
             rcontext = iterparse(rfile, events=("start", "end"))
@@ -122,6 +125,9 @@ class XMLReader(object):
             logging.debug("Exception occured in XML compare %s" %(e))
         except:
             logging.debug("Unexpected error raised");
+        finally:
+            rcontext = None
+            lcontext = None
 
         return equal
 

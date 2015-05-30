@@ -26,5 +26,3 @@ class TestConfiguration(unittest.TestCase):
 
         self.assertEqual(Configuration.resultdir,'Results')
         self.assertEqual(Configuration.logdir,'Temp')
-
-

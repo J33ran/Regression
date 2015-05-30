@@ -8,6 +8,7 @@
     <source>SQL</source>
   <!-- </regression> -->
   <!-- <sybase> -->
+    <semaphore>9</semaphore>
     <dbisql>Temp/dbisql.com</dbisql>
     <uid>dba</uid>
     <pwd>sql</pwd>
