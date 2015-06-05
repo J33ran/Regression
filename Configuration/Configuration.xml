@@ -6,13 +6,13 @@
     <loglevel>DEBUG</loglevel>
   
     <!-- Debug log path   -->
-    <log>D:\Samples\GXDBRegression\GXDBRegression\EagleFord</log>
+    <log>D:\Samples\GXDBRegression\ChuckJ</log>
   
     <!-- Expected(benchmark) resultset directory path   -->
-    <expected>D:\Samples\GXDBRegression\GXDBRegression\EagleFord\Expected</expected>
+    <expected>D:\Samples\GXDBRegression\ChuckJ\Expected</expected>
 
     <!-- Results(newly) resultset directory path   -->
-    <result>D:\Samples\GXDBRegression\GXDBRegression\EagleFord\Results</result>
+    <result>D:\Samples\GXDBRegression\ChuckJ\Results</result>
 
     <!-- Regression SQL scripts directory path   -->
     <source>D:\Samples\GXDBRegression\GXDBRegression\SQL</source>
@@ -34,11 +34,13 @@
 
     <!-- sybase Geographix GXDB path   -->
   
+    <dbf>C:\ProgramData\GeoGraphix\Projects\Chuck J White Full Horizontal Demo SEG-3D 8353 9209 10004_10065RCG\gxdb.db</dbf>
+
     <!--
     <dbf>D:\Samples\GXDBRegression\GXDBRegression\Chuck J White Full Horizontal Demo SEG-3D 8353 9209 10004_10065RCG\gxdb.db</dbf>
-    -->
     
     <dbf>D:\GXDBProjects\Eagle Ford\GXDB.db</dbf>
+    -->
     
 
   <!-- </sybase> -->
