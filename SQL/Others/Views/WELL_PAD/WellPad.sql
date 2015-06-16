@@ -1,0 +1,28 @@
+select WELL_PAD.WELL_PAD_NAME as "Pad Name",
+    WELL_PAD.PAD_LENGTH as Length,
+    WELL_PAD.PAD_WIDTH as Width,
+    WELL_PAD.AZIMUTH as Azimuth,
+    WELL_PAD.PAD_ELEVATION as Elevation,
+    WELL_PAD.LNG_CENTROID as "Pad Center Longitude",
+    WELL_PAD.LAT_CENTROID as "Pad Center Latitude",
+    WELL_PAD.NO_SLOTS as "Number of Slots",
+    WELL_PAD.SLOT_SPACING as Spacing,
+    WELL_PAD.SLOT_SETBACK as Setback,
+    WELL_PAD.DRAINAGE_AZIMUTH as "Drainage Azimuth",
+    WELL_PAD.DRAINAGE_AREA as "Drainage Area",
+    WELL_PAD.DRAINAGE_RATIO as "Drainage Ratio",
+    WELL_PAD.TARGET_LAYER as "Layer Filename",
+    WELL_PAD.TARGET_TYPE as "Target Type",
+    WELL_PAD.DRAINAGE_ORIENTATION as "Drainage Orientation",
+    WELL_PAD.PAD_CONFIGURATION_NAME as "Pad Configuration",
+    WELL_PAD.PAD_TYPE as Type,
+    WELL_PAD.MAXX as "Max X",
+    WELL_PAD.MAXY as "Max Y",
+    WELL_PAD.MINX as "Min X",
+    WELL_PAD.MINY as "Min Y",
+    WELL_PAD.REMARK as Remarks,
+    WELL_PAD.POLYGONBLOB as POLYGONBLOB,
+    WELL_PAD.Parcel as Parcel
+    from DBA.WELL_PAD
+    ORDER BY "Pad Name"
+    ;

@@ -1,0 +1,10 @@
+select LEGAL_FPS_LOC.LOCATION_ID as "Well ID",LEGAL_FPS_LOC.LOCATION_TYPE as Type,
+    LEGAL_FPS_LOC.SOURCE as Source,LEGAL_FPS_LOC.SECTION as Section,
+    LEGAL_FPS_LOC.GRID as Grid,LEGAL_FPS_LOC.REFERENCE_LATITUDE as Latitude,
+    LEGAL_FPS_LOC.REFERENCE_LONGITUDE as Longitude,
+    LEGAL_FPS_LOC.REMARK as "Location Description",
+    LEGAL_FPS_LOC.POLYGONID
+    from dba.LEGAL_FPS_LOC
+    ORDER BY "Well ID"
+    , "Type"
+    ;

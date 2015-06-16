@@ -16,7 +16,6 @@ select a.UWI as "Well ID",a.SOURCE as Source,a.FORM_ID as Formation,
     a.GX_WELLBORE_AZIMUTH as "Wellbore Azimuth",
     a.GX_WELLBORE_ANGLE as "Wellbore Angle",b.GX_INTERNAL_ID as "Source Order",
     a.REMARK as Remarks,a.DOMINANT_LITHOLOGY as Lithology,
-    a.ROW_CHANGED_DATE as "Row Changed Date",
     a.GX_VENDOR_NO as "Age Code"
     from dba.WELL_FORMATION as a,dba.R_SOURCE as b
     where a.SOURCE = b.SOURCE

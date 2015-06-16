@@ -1,0 +1,22 @@
+select SEIS_PICK.SEIS_ACQTN_SURVEY_ID as Program,
+    SEIS_PICK.SEIS_LINE_ID as "Line ID",
+    SEIS_PICK.SEIS_POINT_ID as "Point ID",
+    SEIS_PICK.SEIS_PICK_ID as Event,
+    SEIS_PICK.GX_SHIFT as Shift,
+    SEIS_PICK.GX_SOURCE as Source,
+    SEIS_PICK.SEIS_PICK_TYPE as Type,
+    SEIS_PICK.GX_PHASE as Phase,
+    SEIS_PICK.GX_FORMATION_ID as Formation,
+    SEIS_PICK.GX_DEPTH as Depth,
+    SEIS_PICK.GX_SS_DEPTH as "SS Depth",
+    SEIS_PICK.GX_AMPLITUDE as Amplitude,
+    SEIS_PICK.GX_TIME as "Time",
+    SEIS_PICK.GX_AVG_VELOCITY as "Avg Velocity",
+    SEIS_PICK.GX_CONFIDENCE as Confidence,
+    SEIS_PICK.GX_CONTROL_PT as "Control Flag"
+    from dba.SEIS_PICK
+    ORDER BY "Program"
+    , "Line ID"
+    , "Point ID"
+    , "Event"
+    ;

@@ -1,0 +1,16 @@
+select SEIS_PROC_STEP.SEIS_ACQTN_SURVEY_ID as "Program ID",
+    SEIS_PROC_STEP.ACQTN_SURVEY_NAME as "Program Name",
+    SEIS_PROC_STEP.SEIS_PROCESS_STEP_ID as "Step ID",
+    SEIS_PROC_STEP.REMARK as Remark,
+    SEIS_PROC_STEP.STEP_SEQ_NO as "Sequence Number",
+    SEIS_PROC_STEP.REPLACEMENT_VELOCITY as "Replacement Velocity",
+    SEIS_PROC_STEP.ROW_CHANGED_BY as "Changed By",
+    SEIS_PROC_STEP.PROCESSOR as Processor,SEIS_PROC_STEP.DATUM as Datum,
+    SEIS_PROC_STEP.PROCESSING_FLOW as Workflow,
+    SEIS_PROC_STEP.PROCESSING_DATE as "Date",
+    SEIS_PROC_STEP.PROCESSED_BY as "Processed By"
+    from DBA.SEIS_PROC_STEP
+    ORDER BY "Program ID"
+    , "Step ID"
+    ;
+    

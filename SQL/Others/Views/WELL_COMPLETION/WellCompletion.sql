@@ -1,0 +1,13 @@
+select WELL_COMPLETION.UWI as "Well ID",WELL_COMPLETION.SOURCE as Source,
+    WELL_COMPLETION.COMPLETION_OBS_NO as "Observation Number",
+    WELL_COMPLETION.COMPLETION_FORM as "Comp. Fm",
+    WELL_COMPLETION.COMPLETION_TYPE as "Test Type",
+    WELL_COMPLETION.TOP_DEPTH as "Top Depth",
+    WELL_COMPLETION.BASE_DEPTH as "Base Depth",WELL_COMPLETION.TOP_FORM as "Top Fm",
+    WELL_COMPLETION.BASE_FORM as "Bottom Fm",
+    WELL_COMPLETION.COMPLETION_DATE as "Date"
+    from dba.WELL_COMPLETION
+    ORDER BY "Well ID"
+    , Source
+    , "Observation Number"
+    ;
