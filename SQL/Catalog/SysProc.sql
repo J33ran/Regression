@@ -7,4 +7,4 @@ SELECT
 FROM SYSPROCEDURE P
 KEY JOIN SYSUSER U
 WHERE U.user_name = 'DBA'
-ORDER BY P.Proc_name;
+ORDER BY P.Proc_name, P.creator;

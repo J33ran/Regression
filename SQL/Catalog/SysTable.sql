@@ -5,6 +5,6 @@ SELECT T.table_name
 FROM SYSTAB T
 KEY JOIN SYSUSER U
 WHERE U.user_name = 'DBA'
-ORDER BY T.table_name;
+ORDER BY T.table_name,T.creator;
 
 
