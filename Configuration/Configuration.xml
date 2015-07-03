@@ -6,13 +6,13 @@
     <loglevel>DEBUG</loglevel>
   
     <!-- Debug log path   -->
-    <log>D:\Projects\ChuckJ</log>
+    <log>D:\Projects\Powder</log>
   
     <!-- Expected(benchmark) resultset directory path   -->
-    <expected>D:\Projects\ChuckJ\Expected</expected>
+    <expected>D:\Projects\Powder\Expected</expected>
 
     <!-- Results(newly) resultset directory path   -->
-    <result>D:\Projects\ChuckJ\Results</result>
+    <result>D:\Projects\Powder\Results</result>
 
     <!-- Regression SQL scripts directory path   -->
     <source>D:\Projects\Regression\SQL</source>
@@ -34,8 +34,7 @@
 
     <!-- sybase Geographix GXDB path   -->
   
-    <dbf>D:\DiscoveryHome\Chuck J White Full Horizontal Demo SEG-3D_8353_9209_10004_10241\gxdb.db</dbf>
-
+    <dbf>D:\DiscoveryHome\Powder_10065RCGold_10241\gxdb.db</dbf>
     <!--
     <dbf>D:\Samples\GXDBRegression\GXDBRegression\Chuck J White Full Horizontal Demo SEG-3D 8353 9209 10004_10065RCG\gxdb.db</dbf>
     
