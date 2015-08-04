@@ -35,7 +35,6 @@ select WELL_FORMATION.UWI as "Well ID",WELL_FORMATION.SOURCE as Source,
     WELL_FORMATION.PERCENT_THICKNESS as "Percent Thickness",
     WELL_FORMATION.UNC_FAULT_SOURCE as "Unc/Fault Source",
     WELL_FORMATION.UNC_FAULT_OBS_NO as "Unc/Fault Obs No",
-    WELL_FORMATION.ROW_CHANGED_DATE as "Row Changed Date",
     cast(null as varchar(20)) as "Group"
     from dba.WELL_FORMATION
     ORDER BY "Well ID"
